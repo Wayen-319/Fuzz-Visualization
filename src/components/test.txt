@@ -1,0 +1,133 @@
+// ... existing code ...
+  // ========== 新增：分组递减宽度布局 ========== //
+  // 布局参数
+  const baseLayerWidth = 1000; // 第一层宽度
+  const scale = 0.8;           // 每层缩放
+  const groupGap = 60;         // 组间距
+  const nodeGap = 120;         // 组内节点间距
+
+  // 重新布局每层节点
+  layers.forEach(([depth, nodes], layerIdx) => {
+    if (depth === 0) {
+      // 根节点居中
+      nodes[0].x = (width - baseLayerWidth) / 2 + baseLayerWidth / 2 - 100;
+      return;
+    }
+    // 1. 计算本层宽度
+    const layerWidth = baseLayerWidth * Math.pow(scale, depth - 1);
+    // 2. 按父节点分组
+    const groups = d3.groups(nodes, d => d.parent.data.name);
+    // 3. 计算总节点数
+    const totalNodes = nodes.length;
+    // 4. 计算每组的宽度
+    let xCursor = (width - layerWidth) / 2;
+    groups.forEach(group => {
+      const groupNodes = group[1];
+      const groupWidth = (groupNodes.length - 1) * nodeGap;
+      // 组内节点等间距
+      groupNodes.forEach((node, i) => {
+        node.x = xCursor + i * nodeGap;
+      });
+      // 记录组的起止x
+      group.groupStartX = xCursor;
+      group.groupEndX = xCursor + groupWidth;
+      // 组间隔
+      xCursor += groupWidth + groupGap;
+    });
+    // 把分组信息存到节点上，便于分类矩形分配
+    nodes.forEach(node => {
+      node._groupKey = node.parent.data.name;
+    });
+  });
+
+  // ========== 分类矩形分组 ========== //
+  // 清空原有分类矩形
+  categoryGroups.selectAll('*').remove();
+  layers.forEach(([depth, nodes], layerIdx) => {
+    if (depth === 0) return;
+    // 按父节点分组
+    const groups = d3.groups(nodes, d => d.parent.data.name);
+    // 分类信息
+    const categories = layerCategories[layerIdx - 1] || {};
+    const categoryKeys = Object.keys(categories);
+    // y坐标
+    const baseY = nodes[0].y + 60;
+    const catRectY = baseY + nodeHeight / 2 + 30 + (categoryRectYShift - nodeHeight - 60 - 200);
+    // 每组单独分配分类矩形
+    groups.forEach((group, gi) => {
+      const groupNodes = group[1];
+      const groupStartX = groupNodes[0].x;
+      const groupEndX = groupNodes[groupNodes.length - 1].x;
+      const groupWidth = groupEndX - groupStartX || 1;
+      // 统计组内各分类数量
+      const categoryNodeMap = {};
+      categoryKeys.forEach(cat => { categoryNodeMap[cat] = []; });
+      groupNodes.forEach(d => {
+        for (const cat of categoryKeys) {
+          if (categories[cat].includes(d.data.name)) {
+            categoryNodeMap[cat].push(d);
+            break;
+          }
+        }
+      });
+      const totalCount = d3.sum(categoryKeys, cat => categoryNodeMap[cat].length || 0) || 1;
+      // 分类宽度分配
+      let xCursor = groupStartX + 100;
+      const categoryRects = [];
+      categoryKeys.forEach((cat, i) => {
+        const count = categoryNodeMap[cat].length || 0;
+        const width = count > 0 ? (groupWidth * count / totalCount) : 0;
+        if (width > 0) {
+          categoryRects.push({
+            cat,
+            x: xCursor,
+            width,
+            color: categoryRectColor[i % categoryRectColor.length],
+            count,
+          });
+          xCursor += width;
+        }
+      });
+      // 画分类矩形
+      categoryGroups.selectAll(`rect.cat-rect-layer${depth}-group${gi}`)
+        .data(categoryRects, d => d.cat)
+        .join(
+          enter => enter.append('rect')
+            .attr('class', `cat-rect cat-rect-layer${depth}-group${gi}`)
+            .attr('x', d => d.x)
+            .attr('y', catRectY)
+            .attr('width', d => d.width)
+            .attr('height', categoryRectHeight)
+            .attr('fill', d => d.color)
+            .attr('opacity', 0.7)
+            .lower(),
+          update => update
+            .attr('x', d => d.x)
+            .attr('width', d => d.width)
+            .attr('y', catRectY)
+            .attr('height', categoryRectHeight)
+            .attr('fill', d => d.color)
+            .lower(),
+          exit => exit.remove()
+        );
+      // 分类文字
+      categoryGroups.selectAll(`text.cat-label-layer${depth}-group${gi}`)
+        .data(categoryRects, d => d.cat)
+        .join(
+          enter => enter.append('text')
+            .attr('class', `cat-label cat-label-layer${depth}-group${gi}`)
+            .attr('x', d => d.x + d.width / 2)
+            .attr('y', catRectY + categoryRectHeight / 2 + 5)
+            .attr('text-anchor', 'middle')
+            .attr('fill', '#222')
+            .attr('font-size', 18)
+            .text(d => `${d.cat} (${d.count})`),
+          update => update
+            .attr('x', d => d.x + d.width / 2)
+            .attr('y', catRectY + categoryRectHeight / 2 + 5)
+            .text(d => `${d.cat} (${d.count})`),
+          exit => exit.remove()
+        );
+    });
+  });
+// ... existing code ...
