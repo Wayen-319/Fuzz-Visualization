@@ -3,12 +3,14 @@ export function useDataLoader() {
     const res = await fetch('b.json')
     const same = await fetch('same.json')
     const merge = await fetch('merge.json')
+    const gapbide_result = await fetch('processed_gapbide_results.json')
     
     if (!res.ok) throw new Error('b.json not found')
     
     const data = await res.json()
     const sameData = await same.json()
     const mergeData = await merge.json()
+    const gapbide_resultData = await gapbide_result.json()
     
     // 创建节点映射
     const idMap = {}
@@ -41,7 +43,8 @@ export function useDataLoader() {
     return {
       treeData: idMap[rootNode.name],
       sameData,
-      mergeData
+      mergeData,
+      gapbide_resultData
     }
   }
   

@@ -8,18 +8,9 @@ export function useTreeChart() {
     drawNodeRects, 
     drawLayerRects, 
     drawNodes, 
-    drawSecondSet, 
     drawThresholdLines, 
-    createRootToFirstLayerConnections, 
-    updateNodeVisibility, 
-    updateAllLowerLayerConnections,
-    isNodeAboveThreshold,
-    isNodeAboveAllUpperThresholds,
-    isNodeAndAncestorsAboveThresholds,
-    getNodeDescendants,
-    drawNodeToCategoryLinks, 
-    drawCategoryToNode2Links,
-    drawLayerConnections
+    updateNodeVisibility,
+    isNodeAboveThreshold
   } = useTreeRendering()
 
   // 常量配置
@@ -31,11 +22,8 @@ export function useTreeChart() {
     imgSize: 40,
     maxRectLength: 100,
     rectWidth: 3,
-    categoryRectHeight: 30,
-    categoryRectGap: 10,
-    categoryRectYShift: 60 + 200,
     nodeSpacing: 5,
-    groupGap: 30
+    groupGap: 120
   }
 
   // 设置节点事件
@@ -100,16 +88,23 @@ export function useTreeChart() {
   }
 
   // 主绘制函数
-  const drawTreeChart = (treeData, sameData, mergeData, tooltip, escapeHtml) => {
+  const drawTreeChart = (treeData, sameData, mergeData, tooltip, gapbide_resultData, escapeHtml) => {
     d3.select("#graph-chart-container").selectAll("*").remove()
 
-    const { width, height, nodeWidth, nodeHeight, maxRectLength, rectWidth, categoryRectHeight } = CONFIG
+    const { width, height, nodeWidth, nodeHeight, maxRectLength, rectWidth } = CONFIG
 
     const svg = d3.select("#graph-chart-container")
       .append("svg")
       .attr("width", width)
       .attr("height", height)
       .style("display", "block")
+      
+    const svg2 = d3.select("#graph-chart-container2")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .style("display", "block")
+      
 
     // 添加缩放行为
     const zoom = d3.zoom()
@@ -121,13 +116,7 @@ export function useTreeChart() {
     svg.call(zoom)
 
     const root = createHierarchy(treeData, width)
-    const g = svg.append("g")
-
-    // 创建根节点连线组（只用于根节点到第一层的连线）
-    const rootCategoryLinksGroup = g.append("g").attr("class", "category-links-group-root")
-
-    // 创建层级间连线组
-    const layerConnectionsGroup = g.append("g").attr("class", "layer-connections-group")
+    const g = svg.append("g");
 
     // 创建层次分组
     const layers = d3.groups(root.descendants(), d => d.depth)
@@ -152,488 +141,587 @@ export function useTreeChart() {
     // 绘制节点
     const node = drawNodes(layerGroups, layers, nodeHeight)
 
-    // 绘制第二套内容
-    const node2 = drawSecondSet(g, layers, nodeHeight)
-
-    // 创建拖动回调函数
-    const onThresholdChange = (depth, threshold, { baseY, baseY2, nodeHeight }, layerThresholds) => {
-      // 更新所有下层连线的可见性
-      updateAllLowerLayerConnections(depth, layerThresholds, maxRectLength, getCoverage);
-      
-      // 更新层级间连线 - 重新绘制所有连线以确保正确性
-      drawLayerConnections(layerConnectionsGroup, layers, node2, nodeHeight, layerThresholds, maxRectLength, getCoverage, depth);
-      
-      // 更新节点可见性
-      updateNodeVisibility(node, layers, maxRectLength, getCoverage, layerThresholds);
-      
-      // 更新分类矩形
-      updateCategoryRects(g, layers, mergeData, firstLayerMinX, standardWidth, nodeHeight, layerThresholds, maxRectLength, getCoverage);
-    };
+    // 分类信息集成到节点：构建节点名到类别的映射
+    const nodeToCategory = {}
+    mergeData.forEach((layerCats) => {
+      Object.entries(layerCats).forEach(([cat, arr]) => {
+        arr.forEach(nodeId => {
+          nodeToCategory[nodeId] = cat
+        })
+      })
+    })
+    // 统计所有类别，分配颜色
+    const allCategories = Array.from(new Set(Object.values(nodeToCategory)))
+    const colorMap = {}
+    allCategories.forEach((cat, idx) => {
+      colorMap[cat] = d3.schemeCategory10[idx % d3.schemeCategory10.length]
+    })
 
     // 识别没有分类的节点
-    const findUncategorizedNodes = (layers, mergeData) => {
-      const uncategorizedNodes = [];
-      
-      layers.forEach(([depth, nodes], layerIdx) => {
-        if (depth === 0) return; // 跳过根节点
-        
-        const categories = mergeData[layerIdx-1] || {};
-        const categoryKeys = Object.keys(categories);
-        if (categoryKeys.length === 0) return;
-        
-        nodes.forEach(node => {
-          const nodeNameStr = String(node.data.name);
-          let isCategorized = false;
-          
-          // 检查节点是否属于任何分类
-          for (const cat of categoryKeys) {
-            if (categories[cat] && categories[cat].includes(nodeNameStr)) {
-              isCategorized = true;
-              break;
-            }
-          }
-          
-          // 如果节点不属于任何分类，添加到未分类列表
-          if (!isCategorized) {
-            uncategorizedNodes.push(nodeNameStr);
-          }
-        });
+    const uncategorizedNodes = []
+    layers.forEach(([depth, nodes]) => {
+      if (depth === 0) return
+      nodes.forEach(node => {
+        const nodeNameStr = String(node.data.name)
+        if (!nodeToCategory[nodeNameStr]) {
+          uncategorizedNodes.push(nodeNameStr)
+        }
+      })
+    })
+
+    // --- 新：每层每组内分类着色 ---
+    // 1. 全局收集所有cat编号
+    const allCatsSet = new Set();
+    mergeData.forEach(layerCats => {
+      Object.keys(layerCats).forEach(cat => allCatsSet.add(cat));
+    });
+    const allCats = Array.from(allCatsSet).sort((a, b) => Number(a) - Number(b));
+    // 2. 全局分配颜色
+    const globalColorMap = {};
+    allCats.forEach((cat, idx) => {
+      globalColorMap[cat] = d3.schemeCategory10[idx % d3.schemeCategory10.length];
+    });
+    // 3. 构建每层每组的分组信息和组内分类色（用全局颜色）
+    const groupColorMaps = {};
+    layers.forEach(([depth, nodes]) => {
+      if (depth === 0) return;
+      // 按父节点分组
+      const groupMap = {};
+      nodes.forEach(node => {
+        const parentName = node.parent?.data?.name || 'unknown';
+        if (!groupMap[parentName]) groupMap[parentName] = [];
+        groupMap[parentName].push(node);
       });
-      
-      // 在控制台输出没有分类的节点名字
-      if (uncategorizedNodes.length > 0) {
-        console.log("没有分类的节点名字:", uncategorizedNodes);
-      } else {
-        console.log("所有节点都有分类");
-      }
-      
-      return uncategorizedNodes;
+      groupColorMaps[depth] = {};
+      Object.entries(groupMap).forEach(([parentName, groupNodes]) => {
+        // 统计组内所有分类（merge_data[depth-1]）
+        const mergeLayer = mergeData[depth-1] || {};
+        // 组内节点名集合
+        const groupNodeNames = new Set(groupNodes.map(n => n.data.name));
+        // 组内分类名集合
+        const groupCats = Object.keys(mergeLayer).filter(cat =>
+          (mergeLayer[cat] || []).some(name => groupNodeNames.has(name))
+        );
+        // 组内分类直接用全局颜色映射
+        const colorMap = {};
+        groupCats.forEach(cat => {
+          colorMap[cat] = globalColorMap[cat];
+        });
+        groupColorMaps[depth][parentName] = colorMap;
+      });
+    });
+
+    // 2. 计算每个节点的分类（组内查找）
+    const nodeToGroupCat = {};
+    layers.forEach(([depth, nodes]) => {
+      if (depth === 0) return;
+      const mergeLayer = mergeData[depth-1] || {};
+      nodes.forEach(node => {
+        const parentName = node.parent?.data?.name || 'unknown';
+        let foundCat = null;
+        for (const cat in mergeLayer) {
+          if ((mergeLayer[cat] || []).includes(node.data.name)) {
+            foundCat = cat;
+            break;
+          }
+        }
+        nodeToGroupCat[`${depth}|${parentName}|${node.data.name}`] = foundCat;
+      });
+    });
+
+    // 3. 计算每个节点的可见性
+    const nodeVisibility = new Map();
+    layers.forEach(([depth, nodes]) => {
+      if (depth === 0) return;
+      nodes.forEach(node => {
+        const isVisible = isNodeAboveThreshold(node, {}, maxRectLength, getCoverage);
+        nodeVisibility.set(node.data.name, isVisible);
+      });
+    });
+
+    // 4. 绘制节点
+    node.selectAll("rect").remove();
+    node.append("rect")
+      .attr("x", -rectWidth / 2)
+      .attr("y", d => -getCoverage(d) * maxRectLength)
+      .attr("width", rectWidth)
+      .attr("height", d => getCoverage(d) * maxRectLength)
+      .attr("fill", d => {
+        const name = d.data.name;
+        const isVisible = nodeVisibility.get(name);
+        const depth = d.depth;
+        const parentName = d.parent?.data?.name || 'unknown';
+        const cat = nodeToGroupCat[`${depth}|${parentName}|${name}`];
+        let color = groupColorMaps[depth]?.[parentName]?.[cat];
+        if (!color || typeof color !== 'string' || !color.startsWith('#')) color = "#1976d2";
+        if (!isVisible) return "#bbdefb";
+        if (uncategorizedNodes.includes(name)) return "#ff0000";
+        return color;
+      })
+      .attr("opacity", d => {
+        const name = d.data.name;
+        if (uncategorizedNodes.includes(name)) return 1.0;
+        return 1.0;
+      })
+      .attr("stroke", "white")
+      .attr("stroke-width", 0.2)
+
+    // 动态更新节点颜色和可见性的函数
+    function updateNodeColorsAndVisibility(layerThresholds) {
+      // 重新计算每个节点的可见性
+      node.each(function(d) {
+        if (d.depth === 0) {
+          nodeVisibility.set(d.data.name, true);
+        } else {
+          const isVisible = isNodeAboveThreshold(d, layerThresholds, maxRectLength, getCoverage);
+          nodeVisibility.set(d.data.name, isVisible);
+        }
+      });
+      // 重新设置 fill
+      node.selectAll("rect")
+        .attr("fill", d => {
+          const name = d.data.name;
+          const isVisible = nodeVisibility.get(name);
+          const depth = d.depth;
+          const parentName = d.parent?.data?.name || 'unknown';
+          const cat = nodeToGroupCat[`${depth}|${parentName}|${name}`];
+          let color = groupColorMaps[depth]?.[parentName]?.[cat];
+          if (!color || typeof color !== 'string' || !color.startsWith('#')) color = "#1976d2";
+          if (!isVisible) return "#bbdefb";
+          if (uncategorizedNodes.includes(name)) return "#ff0000";
+          return color;
+        });
+    }
+
+    // 动态更新连线可见性的函数
+    function updateLinkVisibility() {
+      linkGroup.selectAll("path.tree-link")
+        .attr("opacity", d => {
+          const sourceVisible = nodeVisibility.get(d.source.data.name);
+          const targetVisible = nodeVisibility.get(d.target.data.name);
+          return (sourceVisible && targetVisible) ? 1 : 0;
+        });
+    }
+
+    // 保留每一层的横线功能
+    const onThresholdChange = (depth, threshold, { baseY, baseY2, nodeHeight }, layerThresholds) => {
+      updateNodeVisibility(node, layers, maxRectLength, getCoverage, layerThresholds);
+      updateNodeColorsAndVisibility(layerThresholds);
+      updateLinkVisibility(); // 横线拖动时动态更新连线可见性
     };
-
-    // 识别没有分类的节点
-    const uncategorizedNodes = findUncategorizedNodes(layers, mergeData);
-
-    // 绘制横线和拖动行为
-    const { dragLines, dragLines2, dragBehaviors, layerThresholds } = drawThresholdLines(
-      g, layers, node, node2, firstLayerMinX, standardWidth, nodeHeight, maxRectLength, rectWidth, getCoverage, onThresholdChange, uncategorizedNodes
+    drawThresholdLines(
+      g, layers, node, null, firstLayerMinX, standardWidth, nodeHeight, maxRectLength, rectWidth, getCoverage, onThresholdChange, uncategorizedNodes
     )
 
-    // 计算分类连接节点数量的函数
-    const calculateCategoryConnections = (nodes, categories, layerThresholds, maxRectLength, getCoverage, layerDepth) => {
-      const categoryConnections = {};
-      
-      // 初始化每个分类的连接计数
-      Object.keys(categories).forEach(cat => {
-        categoryConnections[cat] = 0;
-      });
-      
-      // 计算每个分类的连接节点数量
-      nodes.forEach(node => {
-        const nodeNameStr = String(node.data.name);
-        
-        // 检查节点是否超过阈值
-        let isAboveThreshold = true;
-        if (layerThresholds && maxRectLength && getCoverage) {
-          isAboveThreshold = isNodeAndAncestorsAboveThresholds(node, layerThresholds, maxRectLength, getCoverage, layerDepth);
-        }
-        
-        // 如果节点超过阈值，计算它属于哪个分类
-        if (isAboveThreshold) {
-          for (const cat of Object.keys(categories)) {
-            if (categories[cat] && categories[cat].includes(nodeNameStr)) {
-              categoryConnections[cat]++;
-              break;
-            }
-          }
-        }
-      });
-      
-      return categoryConnections;
-    };
-
-    // 更新分类矩形的函数
-    const updateCategoryRects = (g, layers, mergeData, firstLayerMinX, standardWidth, nodeHeight, layerThresholds, maxRectLength, getCoverage) => {
-      layers.forEach(([depth, nodes], layerIdx) => {
-        if (depth === 0) return;
-        
-        const baseY = nodes[0].y + 60;
-        const categories = mergeData[layerIdx-1] || {};
-        const categoryKeys = Object.keys(categories);
-        if (categoryKeys.length === 0) return;
-        
-        if (depth === 1) {
-          // 第一层：直接按mergeData分类
-          const categoryConnections = calculateCategoryConnections(nodes, categories, layerThresholds, maxRectLength, getCoverage, depth);
-          
-          // 计算分类宽度分配
-          const totalCount = d3.sum(categoryKeys, cat => categoryConnections[cat] || 0) || 1;
-          const totalWidth = standardWidth + 1;
-          let xCursor = firstLayerMinX + 100 - 0.5;
-          
-          // 更新分类矩形
-          categoryKeys.forEach((cat, i) => {
-            const count = categoryConnections[cat] || 0;
-            const width = count > 0 ? (totalWidth * count / totalCount) : 0;
-            
-            // 更新或创建分类矩形
-            const rectSelector = `.cat-rect-layer${depth}-cat${i}`;
-            const existingRect = g.select(rectSelector);
-            
-            if (width > 0) {
-              if (existingRect.empty()) {
-                // 创建新矩形
-                g.append("rect")
-                  .attr("class", `cat-rect cat-rect-layer${depth}-cat${i}`)
-                  .attr("x", xCursor)
-                  .attr("y", baseY + (nodeHeight + 400) / 2 - 15)
-                  .attr("width", width)
-                  .attr("height", 30)
-                  .attr("fill", d3.schemeCategory10[i % d3.schemeCategory10.length])
-                  .attr("opacity", 0.7)
-                  .lower();
-              } else {
-                // 更新现有矩形
-                existingRect
-                  .attr("x", xCursor)
-                  .attr("width", width)
-                  .style("display", "block");
-              }
-              xCursor += width;
-            } else {
-              // 隐藏没有连接的矩形
-              if (!existingRect.empty()) {
-                existingRect.style("display", "none");
-              }
-            }
-          });
-        } else {
-          // 其他层：先按父节点分组，再在每个组内按mergeData分类
-          const groupMap = {};
-          nodes.forEach(node => {
-            const parentName = node.parent?.data?.name || 'unknown';
-            if (!groupMap[parentName]) groupMap[parentName] = [];
-            groupMap[parentName].push(node);
-          });
-          const groupKeys = Object.keys(groupMap);
-          const groupNodes = groupKeys.map(key => groupMap[key]);
-          
-          // 计算每组宽度和组间间隔
-          const groupWidths = groupNodes.map(group => (group.length > 0 ? (group.length - 1) * CONFIG.nodeSpacing : 0));
-          let totalGroupsWidth = groupWidths.reduce((a, b) => a + b, 0);
-          let totalGapWidth = CONFIG.groupGap * (groupNodes.length - 1);
-          let totalWidth = totalGroupsWidth + totalGapWidth;
-          
-          // 计算上一层宽度
-          let prevLayerWidth = standardWidth;
-          
-          // 居中排列
-          let x = firstLayerMinX;
-          if (totalWidth > prevLayerWidth) {
-            x = firstLayerMinX;
-          } else {
-            x = firstLayerMinX + (prevLayerWidth - totalWidth) / 2;
-          }
-          
-          // 为每组分配位置并更新分类矩形
-          groupNodes.forEach((group, groupIdx) => {
-            // 为组内节点分配x坐标
-            group.forEach((node, j) => {
-              node.x = x + j * CONFIG.nodeSpacing;
-            });
-            
-            // 计算组内分类连接数量
-            const groupCategoryConnections = calculateCategoryConnections(group, categories, layerThresholds, maxRectLength, getCoverage, depth);
-            
-            // 计算组内分类宽度
-            const groupMinX = Math.min(...group.map(n => n.x));
-            const groupMaxX = Math.max(...group.map(n => n.x));
-            const groupWidth = groupMaxX - groupMinX + 1;
-            
-            // 为组内每个分类分配宽度
-            let categoryX = groupMinX + 100 - 0.5;
-            categoryKeys.forEach((cat, catIdx) => {
-              const count = groupCategoryConnections[cat] || 0;
-              const width = count > 0 ? (groupWidth * count) / group.length : 0;
-              
-              // 更新或创建组内分类矩形
-              const rectSelector = `.cat-rect-layer${depth}-group${groupIdx}-cat${catIdx}`;
-              const existingRect = g.select(rectSelector);
-              
-              if (width > 0) {
-                if (existingRect.empty()) {
-                  // 创建新矩形
-                  g.append("rect")
-                    .attr("class", `cat-rect cat-rect-layer${depth}-group${groupIdx}-cat${catIdx}`)
-                    .attr("x", categoryX)
-                    .attr("y", baseY + (nodeHeight + 400) / 2 - 15)
-                    .attr("width", width)
-                    .attr("height", 30)
-                    .attr("fill", d3.schemeCategory10[catIdx % d3.schemeCategory10.length])
-                    .attr("opacity", 0.7)
-                    .lower();
-                } else {
-                  // 更新现有矩形
-                  existingRect
-                    .attr("x", categoryX)
-                    .attr("width", width)
-                    .style("display", "block");
-                }
-                categoryX += width;
-              } else {
-                // 隐藏没有连接的矩形
-                if (!existingRect.empty()) {
-                  existingRect.style("display", "none");
-                }
-              }
-            });
-            
-            x += groupWidths[groupIdx] + CONFIG.groupGap;
-          });
-        }
-      });
-    };
-
-    // 每一层都画节点到分类、分类到第二套内容的连线
-    layers.forEach(([depth, nodes], layerIdx) => {
-      if (depth === 0) return;
-      
-      // 为每一层创建独立的连线组
-      const layerCategoryLinksGroup = g.append("g").attr("class", `category-links-group-layer${depth}`)
-      
-      // 分类信息
-      const categories = mergeData[layerIdx-1] || {};
-      const categoryKeys = Object.keys(categories);
-      if (categoryKeys.length === 0) return;
-      
-      // 该层所有节点的y都一样
-      const baseY = nodes[0].y + 60;
-      const baseY2 = baseY + nodeHeight + 400;
-      
-      if (depth === 1) {
-        // 第一层：直接按mergeData分类
-        // 分类统计
-        const categoryNodeMap = {};
-        categoryKeys.forEach((cat, i) => {
-          categoryNodeMap[cat] = [];
-        });
-        
-        // 所有节点都参与分类
-        nodes.forEach(d => {
-          const name = d.data.name;
-          for (const cat of categoryKeys) {
-            if (categories[cat] && categories[cat].includes(name)) {
-              categoryNodeMap[cat].push(d);
-              break;
-            }
-          }
-        });
-        
-        // 分类宽度分配
-        const totalCount = d3.sum(categoryKeys, cat => categoryNodeMap[cat].length || 0) || 1;
-        const totalWidth = standardWidth + 1;
-        let xCursor = firstLayerMinX + 100 - 0.5;
-        const categoryRects = [];
-        categoryKeys.forEach((cat, i) => {
-          const count = categoryNodeMap[cat].length || 0;
-          const width = count > 0 ? (totalWidth * count / totalCount) : 0;
-          if (width > 0) {
-            categoryRects.push({
-              cat,
-              x: xCursor,
-              width,
-              color: d3.schemeCategory10[i % d3.schemeCategory10.length],
-              count,
-            });
-            xCursor += width;
-          }
-        });
-        
-        // 画分类矩形
-        categoryRects.forEach((catRect, catIdx) => {
-          layerCategoryLinksGroup.append("rect")
-            .attr("class", `cat-rect cat-rect-layer${depth}-cat${catIdx}`)
-            .attr("x", catRect.x)
-            .attr("y", baseY + (nodeHeight + 400) / 2 - 15)
-            .attr("width", catRect.width)
-            .attr("height", 30)
-            .attr("fill", catRect.color)
-            .attr("opacity", 0.7)
-            .lower();
-        });
-        
-        // 画节点到分类连线
-        drawNodeToCategoryLinks(
-          layerCategoryLinksGroup,
-          nodes,
-          categories,
-          categoryRects,
-          baseY,
-          baseY + (nodeHeight + 400) / 2,
-          depth,
-          layerThresholds,
-          maxRectLength,
-          getCoverage,
-          depth // 与当前层绑定
-        );
-        
-        // 画分类到第二套内容节点连线
-        const nodes2 = node2.filter(d => d.depth === depth).data();
-        drawCategoryToNode2Links(
-          layerCategoryLinksGroup,
-          nodes2,
-          categories,
-          categoryRects,
-          baseY2,
-          baseY + (nodeHeight + 400) / 2 + 30,
-          depth,
-          layerThresholds,
-          maxRectLength,
-          getCoverage,
-          depth // 与当前层绑定
-        );
-      } else {
-        // 其他层：先按父节点分组，再在每个组内按mergeData分类
-        
-        // 1. 按父节点分组
-        const groupMap = {};
-        nodes.forEach(node => {
-          const parentName = node.parent?.data?.name || 'unknown';
-          if (!groupMap[parentName]) groupMap[parentName] = [];
-          groupMap[parentName].push(node);
-        });
-        const groupKeys = Object.keys(groupMap);
-        const groupNodes = groupKeys.map(key => groupMap[key]);
-        
-        // 2. 计算每组宽度和组间间隔
-        const groupWidths = groupNodes.map(group => (group.length > 0 ? (group.length - 1) * CONFIG.nodeSpacing : 0));
-        let totalGroupsWidth = groupWidths.reduce((a, b) => a + b, 0);
-        let totalGapWidth = CONFIG.groupGap * (groupNodes.length - 1);
-        let totalWidth = totalGroupsWidth + totalGapWidth;
-        
-        // 3. 计算上一层宽度
-        let prevLayerWidth = standardWidth;
-        
-        // 4. 居中排列
-        let x = firstLayerMinX;
-        if (totalWidth > prevLayerWidth) {
-          x = firstLayerMinX;
-        } else {
-          x = firstLayerMinX + (prevLayerWidth - totalWidth) / 2;
-        }
-        
-        // 5. 为每组分配位置并画分类矩形
-        groupNodes.forEach((group, groupIdx) => {
-          // 为每个组创建独立的连线组
-          const groupCategoryLinksGroup = g.append("g").attr("class", `category-links-group-layer${depth}-group${groupIdx}`);
-          
-          // 为组内节点分配x坐标
-          group.forEach((node, j) => {
-            node.x = x + j * CONFIG.nodeSpacing;
-          });
-          
-          // 在组内按categoryKeys分类
-          const groupCategoryMap = {};
-          categoryKeys.forEach((cat, i) => {
-            groupCategoryMap[cat] = [];
-          });
-          
-          group.forEach(node => {
-            const name = node.data.name;
-            for (const cat of categoryKeys) {
-              if (categories[cat] && categories[cat].includes(name)) {
-                groupCategoryMap[cat].push(node);
-                break;
-              }
-            }
-          });
-          
-          // 计算组内分类宽度
-          const groupMinX = Math.min(...group.map(n => n.x));
-          const groupMaxX = Math.max(...group.map(n => n.x));
-          const groupWidth = groupMaxX - groupMinX + 1;
-          
-          // 为组内每个分类分配宽度
-          const groupCategoryRects = [];
-          let categoryX = groupMinX + 100 - 0.5;
-          categoryKeys.forEach((cat, catIdx) => {
-            const count = groupCategoryMap[cat].length || 0;
-            if (count > 0) {
-              const width = (groupWidth * count) / group.length;
-              groupCategoryRects.push({
-                cat,
-                x: categoryX,
-                width,
-                color: d3.schemeCategory10[catIdx % d3.schemeCategory10.length],
-                count,
-                groupIdx
-              });
-              categoryX += width;
-            }
-          });
-          
-          // 画组内分类矩形
-          groupCategoryRects.forEach((catRect, catIdx) => {
-            groupCategoryLinksGroup.append("rect")
-              .attr("class", `cat-rect cat-rect-layer${depth}-group${groupIdx}-cat${catIdx}`)
-              .attr("x", catRect.x)
-              .attr("y", baseY + (nodeHeight + 400) / 2 - 15)
-              .attr("width", catRect.width)
-              .attr("height", 30)
-              .attr("fill", catRect.color)
-              .attr("opacity", 0.7)
-              .lower();
-          });
-          
-          // 画节点到分类连线（组内分类）
-          drawNodeToCategoryLinks(
-            groupCategoryLinksGroup,
-            group,
-            categories,
-            groupCategoryRects,
-            baseY,
-            baseY + (nodeHeight + 400) / 2,
-            depth,
-            layerThresholds,
-            maxRectLength,
-            getCoverage,
-            depth // 与当前层绑定
-          );
-          
-          // 画分类到第二套内容节点连线（组内分类）
-          const groupNodes2 = node2.filter(d => d.depth === depth && group.some(g => g.data.name === d.data.name)).data();
-          drawCategoryToNode2Links(
-            groupCategoryLinksGroup,
-            groupNodes2,
-            categories,
-            groupCategoryRects,
-            baseY2,
-            baseY + (nodeHeight + 400) / 2 + 30,
-            depth,
-            layerThresholds,
-            maxRectLength,
-            getCoverage,
-            depth // 与当前层绑定
-          );
-          
-          x += groupWidths[groupIdx] + CONFIG.groupGap;
-        });
+    // 只保留父子节点之间的树结构连线
+    const linkGroup = g.append("g").attr("class", "tree-links-group")
+    const links = [];
+    root.descendants().forEach(node => {
+      if (node.parent) {
+        links.push({ source: node.parent, target: node });
       }
     });
 
-    // 绘制层级间连线（上一层第二套内容到下一层第一套内容）
-    drawLayerConnections(layerConnectionsGroup, layers, node2, nodeHeight, layerThresholds, maxRectLength, getCoverage, null)
+    // 计算每层rect的顶部和底部y坐标
+    const layerRectsY = {};
+    layers.forEach(([depth, nodes]) => {
+      if (depth === 0) return;
+      // drawLayerRects 里的 y 和 height 计算方式
+      const rectY = nodes[0].y - 60 - nodeHeight / 2;
+      const rectHeight = nodeHeight + 89.5;
+      layerRectsY[depth] = {
+        top: rectY,
+        bottom: rectY + rectHeight
+      };
+    });
 
-    // 创建根节点到第一层的连线（使用根节点连线组）
-    createRootToFirstLayerConnections(rootCategoryLinksGroup, layers)
+    linkGroup.selectAll("path.tree-link")
+      .data(links)
+      .join("path")
+      .attr("class", "tree-link")
+      .attr("fill", "none")
+      .attr("stroke", "#bbb")
+      .attr("stroke-width", 1)
+      .attr("d", d => {
+        // 父节点根部（中心）
+        const startX = d.source.x + 100;
+        const startY = d.source.y + 60; // 中心点
+        // 子节点rect顶端
+        const endX = d.target.x + 100;
+        const endY = (() => {
+          const centerY = d.target.y + 60;
+          const rectTop = -getCoverage(d.target) * maxRectLength;
+          return centerY + rectTop;
+        })();
+        const midY = (startY + endY) / 2;
+        return `M${startX},${startY} C${startX},${midY} ${endX},${midY} ${endX},${endY}`;
+      })
 
     // 初始化节点可见性
     updateNodeVisibility(node, layers, maxRectLength, getCoverage, null)
 
-    // 初始化分类矩形
-    updateCategoryRects(g, layers, mergeData, firstLayerMinX, standardWidth, nodeHeight, layerThresholds, maxRectLength, getCoverage);
-
     // 设置节点事件
     setupNodeEvents(node, tooltip, sameData, escapeHtml)
+
+    // --- 新增：为每层左侧绘制 sidebar 和标题 ---
+    const sidebarWidth = 64;
+    const sidebarMargin = 48;
+    const sidebarBlockHeight = 64;
+    const sidebarBlockGap = 30;
+    const sidebarTitleFontSize = 64;
+    const sidebarTitleHeight = sidebarTitleFontSize + 4;
+
+    layers.forEach(([depth, nodes], layerIdx) => {
+      if (depth === 0) return;
+      // 按父节点分组
+      const groupMap = {};
+      nodes.forEach(node => {
+        const parentName = node.parent?.data?.name || 'unknown';
+        if (!groupMap[parentName]) groupMap[parentName] = [];
+        groupMap[parentName].push(node);
+      });
+      // 取第一组
+      const firstGroupName = Object.keys(groupMap)[0];
+      if (!firstGroupName) return;
+      const colorMap = groupColorMaps[depth]?.[firstGroupName];
+      // console.log(groupColorMaps)
+      if (!colorMap) return;
+      const cats = Object.keys(colorMap);
+      if (cats.length === 0) return;
+      
+      // 保存当前组的颜色映射，用于后续更新
+      let currentGroupColorMap = colorMap;
+
+      // 该层的 y 坐标
+      const y = nodes[0].y - 58.5 - nodeHeight / 2;
+      // 该层最左侧节点的 x 坐标
+      const minX = Math.min(...groupMap[firstGroupName].map(n => n.x));
+
+      // 横向排列 sidebar 色块，每行最多5个
+      const sidebarX = minX - sidebarWidth - sidebarMargin - 300;
+      const sidebarY = y;
+      const blocksPerRow = 5;
+      const numRows = Math.ceil(cats.length / blocksPerRow);
+      const totalSidebarWidth = Math.min(blocksPerRow, cats.length) * sidebarWidth + (Math.min(blocksPerRow, cats.length) - 1) * sidebarBlockGap;
+      const totalSidebarHeight = numRows * sidebarBlockHeight + (numRows - 1) * sidebarBlockGap;
+
+      // 选中该层的 <g class="layer">
+      const layerG = d3.select(layerGroups.nodes()[layerIdx]);
+
+      // 创建sidebar的函数
+      const createSidebar = (colorMap, groupName) => {
+        // 清除现有的sidebar色块
+        layerG.selectAll(".sidebar-rect").remove();
+        
+        const cats = Object.keys(colorMap);
+        const sidebarRects = [];
+        
+      // 横向排列 sidebar 色块，超出5个则换行
+      cats.forEach((cat, i) => {
+        const row = Math.floor(i / blocksPerRow);
+        const col = i % blocksPerRow;
+          const rect = layerG.append("rect")
+            .attr("class", "sidebar-rect")
+          .attr("x", sidebarX + col * (sidebarWidth + sidebarBlockGap))
+          .attr("y", sidebarY + row * (sidebarBlockHeight + sidebarBlockGap))
+          .attr("width", sidebarWidth)
+          .attr("height", sidebarBlockHeight)
+          .attr("fill", colorMap[cat])
+          .attr("rx", 4)
+          .attr("stroke", "#888")
+          .attr("stroke-width", 0.5)
+            .attr("opacity", 0.95)
+            .attr("data-category", cat)
+            .style("cursor", "pointer")
+            .on("click", function() {
+              // 获取当前层、组、类别、色块颜色
+              const color = colorMap[cat];
+              // 获取该组下所有节点
+              const groupNodes = groupMap[groupName] || [];
+              // 只保留该类别的节点
+              const filteredNodes = groupNodes.filter(node => {
+                // nodeToGroupCat: key = `${depth}|${parentName}|${node.data.name}`
+                const parentName = node.parent?.data?.name || 'unknown';
+                const key = `${depth}|${parentName}|${node.data.name}`;
+                return nodeToGroupCat[key] === cat;
+              });
+              // 获取当前层数
+              const layerNum = depth;
+              // 获取当前组在本层的序号
+              // 将 groupIdx 变为数字类别（即该颜色在 colorMap 中的索引）
+              const groupIdx = Object.values(colorMap).findIndex(v => v === color);
+              console.log(layerNum, groupIdx);
+              // 生成HTML
+              let html = `<div style='font-size:20px;font-weight:bold;margin-bottom:12px;'>layer${layerNum} group${groupIdx+1} <span style='display:inline-block;width:24px;height:24px;background:${color};border-radius:4px;vertical-align:middle;margin-left:8px;'></span></div>`;
+              html += `<div style='font-size:16px;'>`;
+              if (filteredNodes.length === 0) {
+                html += `<div style='color:#888;'>该组下没有该类别的节点</div>`;
+              } else {
+                if (gapbide_resultData[depth-1][groupIdx] === "NA"){
+                  html += `<div style='margin-bottom:6px;'><b>${gapbide_resultData[depth-1][groupIdx]}</b></div>`;
+                }
+                else{
+                  // console.log(gapbide_resultData);
+                  const arr = gapbide_resultData?.[depth-1]?.[groupIdx];
+                  if (Array.isArray(arr)) {
+                    html += arr.map((item, idx) => {
+                      const formatted = item.trim().split(/\s+/).join(', ');
+                      let line = `<div style='margin-bottom:6px;'><b>${formatted}</b></div>`;
+                      if (idx !== arr.length - 1) {
+                        line += `<hr style='border:none;border-top:1px solid #e0e0e0;margin:8px 20px;'/>`;
+                      }
+                      return line;
+                    }).join('');
+                  } else if (arr) {
+                    const formatted = arr.trim().split(/\s+/).join(', ');
+                    html += `<div style='margin-bottom:6px;'><b>${formatted}</b></div>`;
+                  }
+                }
+              }
+              html += `</div>`;
+              // 渲染到右侧区域
+              const rightPanel = document.getElementById("graph-chart-container2");
+              if (rightPanel) rightPanel.innerHTML = html;
+            });
+          sidebarRects.push(rect);
+        });
+        
+        return sidebarRects;
+      };
+      
+      // 初始化sidebar（显示第一组的色块）
+      let sidebarRects = createSidebar(colorMap, firstGroupName);
+      
+      // 闪亮覆盖矩形的函数
+      const highlightGroupRect = (depth, groupName, layerG, groupMap) => {
+        // 找到对应的覆盖矩形
+        const rects = layerG.selectAll("rect").filter(function() {
+          // 检查是否是覆盖矩形（不是sidebar的色块）
+          return !d3.select(this).classed("sidebar-rect");
+        });
+        
+        // 如果是第一层，只有一个覆盖矩形
+        if (depth === 1) {
+          const firstLayerRect = rects.filter((d, i) => i === 0);
+          if (!firstLayerRect.empty()) {
+            // 添加闪亮效果
+            firstLayerRect
+              .transition()
+              .duration(200)
+              .attr("fill", "#ffeb3b") // 黄色闪亮
+              .transition()
+              .duration(200)
+              .attr("fill", "#e0e0e0"); // 恢复原色
+          }
+        } else {
+          // 其他层：通过位置找到对应组的覆盖矩形
+          // 获取该组节点的x坐标范围
+          const groupNodes = groupMap[groupName] || [];
+          if (groupNodes.length > 0) {
+            const groupMinX = Math.min(...groupNodes.map(n => n.x));
+            const groupMaxX = Math.max(...groupNodes.map(n => n.x));
+            
+            // 找到覆盖矩形，其x坐标范围与组节点范围匹配
+            const targetRect = rects.filter(function() {
+              const rectX = parseFloat(d3.select(this).attr("x"));
+              const rectWidth = parseFloat(d3.select(this).attr("width"));
+              const rectMinX = rectX - 100 + 2; // 减去偏移量
+              const rectMaxX = rectMinX + rectWidth - 4; // 减去边框宽度
+              
+              // 检查矩形范围是否与组范围重叠
+              return rectMinX <= groupMaxX && rectMaxX >= groupMinX;
+            });
+            
+            if (!targetRect.empty()) {
+              // 添加闪亮效果
+              targetRect
+                .transition()
+                .duration(200)
+                .attr("fill", "#ffeb3b") // 黄色闪亮
+                .transition()
+                .duration(200)
+                .attr("fill", "#e0e0e0"); // 恢复原色
+            }
+          }
+        }
+      };
+      
+      // --- 新增：为每层添加下拉式菜单栏 ---
+      const dropdownWidth = 240;
+      const dropdownHeight = 80;
+      const dropdownMargin = 96;
+      const dropdownFontSize = 45;
+      const dropdownTitleFontSize = 32;
+      const dropdownTitleHeight = dropdownTitleFontSize + 8;
+      
+      // 计算下拉菜单的位置（在sidebar左侧）
+      const dropdownX = sidebarX - dropdownWidth - dropdownMargin;
+      const dropdownY = sidebarY;
+      
+      // 添加下拉菜单容器
+      const dropdownContainer = layerG.append("g")
+        .attr("class", "dropdown-container")
+        .attr("transform", `translate(${dropdownX}, ${dropdownY})`);
+      
+      // 创建下拉菜单背景
+      const dropdownBg = dropdownContainer.append("rect")
+        .attr("width", dropdownWidth)
+        .attr("height", dropdownHeight)
+        .attr("fill", "#f8f9fa")
+        .attr("stroke", "#dee2e6")
+        .attr("stroke-width", 1)
+        .attr("rx", 8);
+      
+      // 创建下拉菜单文本
+      const dropdownText = dropdownContainer.append("text")
+        .attr("x", dropdownWidth / 2)
+        .attr("y", dropdownHeight / 2 + 20)
+        .attr("text-anchor", "middle")
+        .attr("font-size", dropdownFontSize)
+        .attr("fill", "#495057")
+        .attr("font-family", "Arial, sans-serif")
+        .text(`Group 1`);
+      
+      // 创建下拉箭头
+      const arrowSize = 8;
+      const arrowX = dropdownWidth - 15;
+      const arrowY = dropdownHeight / 2;
+      
+      const arrow = dropdownContainer.append("path")
+        .attr("d", `M${arrowX - arrowSize/2},${arrowY - arrowSize/2} L${arrowX + arrowSize/2},${arrowY - arrowSize/2} L${arrowX},${arrowY + arrowSize/2} Z`)
+        .attr("fill", "#6c757d");
+      
+      // 创建下拉选项列表（初始隐藏）
+      const dropdownOptions = dropdownContainer.append("g")
+        .attr("class", "dropdown-options")
+        .style("display", "none");
+      
+      // 为每个组创建选项
+      Object.keys(groupMap).forEach((groupName, groupIndex) => {
+        const optionY = dropdownHeight + 5 + groupIndex * (dropdownHeight + 2);
+        
+        // 选项背景
+        dropdownOptions.append("rect")
+          .attr("x", 0)
+          .attr("y", optionY)
+          .attr("width", dropdownWidth)
+          .attr("height", dropdownHeight)
+          .attr("fill", "#ffffff")
+          .attr("stroke", "#dee2e6")
+          .attr("stroke-width", 1)
+          .attr("rx", 4)
+          .attr("class", "dropdown-option")
+          .attr("data-group-index", groupIndex);
+        
+        // 选项文本
+        dropdownOptions.append("text")
+          .attr("x", dropdownWidth / 2)
+          .attr("y", optionY + dropdownHeight / 2 + 20)
+          .attr("text-anchor", "middle")
+          .attr("font-size", dropdownFontSize)
+          .attr("fill", "#495057")
+          .attr("font-family", "Arial, sans-serif")
+          .attr("class", "dropdown-option-text")
+          .attr("data-group-index", groupIndex)
+          .text(`Group ${groupIndex + 1}`);
+      });
+      
+      // 添加下拉菜单交互事件
+      let isDropdownOpen = false;
+      let currentGroupIndex = 0;
+      
+      // 点击下拉菜单背景切换显示/隐藏
+      dropdownBg.on("click", function() {
+        isDropdownOpen = !isDropdownOpen;
+        dropdownOptions.style("display", isDropdownOpen ? "block" : "none");
+        
+        // 旋转箭头
+        arrow.attr("transform", isDropdownOpen ? `rotate(180, ${arrowX}, ${arrowY})` : "");
+      });
+      
+      // 点击下拉菜单文本切换显示/隐藏
+      dropdownText.on("click", function() {
+        isDropdownOpen = !isDropdownOpen;
+        dropdownOptions.style("display", isDropdownOpen ? "block" : "none");
+        
+        // 旋转箭头
+        arrow.attr("transform", isDropdownOpen ? `rotate(180, ${arrowX}, ${arrowY})` : "");
+      });
+      
+      // 点击箭头切换显示/隐藏
+      arrow.on("click", function() {
+        isDropdownOpen = !isDropdownOpen;
+        dropdownOptions.style("display", isDropdownOpen ? "block" : "none");
+        
+        // 旋转箭头
+        arrow.attr("transform", isDropdownOpen ? `rotate(180, ${arrowX}, ${arrowY})` : "");
+      });
+      
+      // 为每个选项添加点击事件
+      dropdownOptions.selectAll(".dropdown-option").on("click", function() {
+        const groupIndex = parseInt(this.getAttribute("data-group-index"));
+        currentGroupIndex = groupIndex;
+        
+        // 更新显示的文本
+        dropdownText.text(`Group ${groupIndex + 1}`);
+        
+        // 隐藏下拉选项
+        isDropdownOpen = false;
+        dropdownOptions.style("display", "none");
+        arrow.attr("transform", "");
+        
+        // 获取选中的组名
+        const selectedGroupName = Object.keys(groupMap)[groupIndex];
+        
+        // 获取该组的颜色映射
+        const selectedGroupColorMap = groupColorMaps[depth]?.[selectedGroupName] || {};
+        currentGroupColorMap = selectedGroupColorMap; // 更新当前组的颜色映射
+        
+        // 重新创建sidebar，显示选中组的色块
+        sidebarRects = createSidebar(selectedGroupColorMap, selectedGroupName);
+        
+        // 闪亮对应的覆盖矩形
+        highlightGroupRect(depth, selectedGroupName, layerG, groupMap);
+      
+      });
+      
+      // 添加鼠标悬停效果
+      dropdownBg.on("mouseover", function() {
+        d3.select(this).attr("fill", "#e9ecef");
+      }).on("mouseout", function() {
+        d3.select(this).attr("fill", "#f8f9fa");
+      });
+      
+      dropdownOptions.selectAll(".dropdown-option").on("mouseover", function() {
+        d3.select(this).attr("fill", "#e9ecef");
+      }).on("mouseout", function() {
+        d3.select(this).attr("fill", "#ffffff");
+      });
+    });
+
+    // 获取内容的包围盒
+    const bbox = g.node().getBBox();
+    const svgWidth = width;   // 你的 svg 宽度
+    const svgHeight = height; // 你的 svg 高度
+
+    // 计算缩放比例（留点边距，比如 0.9）
+    const scale = Math.min(
+      svgWidth / bbox.width,
+      svgHeight / bbox.height,
+      1 // 不要放大超过1
+    ) * 0.9;
+
+    // 计算平移，让内容居中
+    const translateX = 500;
+    const translateY = 0;
+
+    // 应用初始缩放和平移
+    svg.transition().duration(0).call(
+      zoom.transform,
+      d3.zoomIdentity
+        .translate(translateX, translateY)
+        .scale(scale)
+    );
   }
 
   return {

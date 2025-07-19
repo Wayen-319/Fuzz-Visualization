@@ -1,15 +1,14 @@
 <template>
   <div class="container">
-    <h2 style="margin-bottom: 20px;">树状图示例</h2>
-    <div 
-      id="graph-chart-container" 
-      class="chart-container"
-    ></div>
+    <h2 style="margin-bottom: 20px;"></h2>
+    <div id="graph-chart-container" class="chart-container"></div>
+    <div id="graph-chart-container2" class="chart-container2"></div>
     <div v-if="error" class="error">{{ error }}</div>
   </div>
 </template>
 
 <style>
+
 .tooltip {  
   position: absolute;
   min-width: 400px;
@@ -87,19 +86,84 @@
 }
 
 .chart-container {
-  position: relative;
-  width: min(90vw, 1200px);
-  height: min(70vh, 800px);
+  position: fixed;           /* 固定在页面上，不随滚动条滚动 */
+  left: 10px;                   /* 紧贴左侧 */
+  top: 10px;                    /* 紧贴顶部 */
+  width: 70vw;               /* 宽度为视口宽度的70% */
+  height: 98vh;             /* 高度为视口高度的100% */
   border: 1px solid #eee;
   background: #fafbfc;
   box-sizing: border-box;
   overflow: hidden;
 }
 
+.chart-container2 {
+  position: fixed;
+  left: 1820px;
+  top: 10px;
+  width: 28.3vw;
+  height: 98vh;
+  border: 1px solid #eee;
+  background: #fafbfc;
+  box-sizing: border-box;
+  overflow-y: auto; /* 允许垂直滚动 */
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 0;
+}
+
+/* 下拉菜单样式 */
+.dropdown-container {
+  cursor: pointer;
+}
+
+.dropdown-container rect {
+  transition: fill 0.2s ease;
+}
+
+.dropdown-container text {
+  pointer-events: none;
+}
+
+.dropdown-options {
+  z-index: 1000;
+}
+
+.dropdown-option {
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.dropdown-option-text {
+  pointer-events: none;
+}
+.dropdown-container {
+  cursor: pointer;
+}
+
+.dropdown-container rect {
+  transition: fill 0.2s ease;
+}
+
+.dropdown-container text {
+  pointer-events: none;
+}
+
+.dropdown-options {
+  z-index: 1000;
+}
+
+.dropdown-option {
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.dropdown-option-text {
+  pointer-events: none;
 }
 </style>
 
@@ -116,10 +180,10 @@ const { drawTreeChart, setupNodeEvents } = useTreeChart()
 
 onMounted(async () => {
   try {
-    const { treeData, sameData, mergeData } = await loadData()
+    const { treeData, sameData, mergeData, gapbide_resultData } = await loadData()
     const tooltip = createTooltip()
     setupTooltipEvents(tooltip, sameData)
-    drawTreeChart(treeData, sameData, mergeData, tooltip, escapeHtml)
+    drawTreeChart(treeData, sameData, mergeData, tooltip, gapbide_resultData, escapeHtml)
   } catch (e) {
     error.value = "数据加载失败"
     console.error(e)

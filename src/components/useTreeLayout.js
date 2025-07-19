@@ -96,6 +96,7 @@ export function useTreeLayout() {
   }
 
   const layoutGroupedNodes = (nodes, firstLayerMinX, standardWidth, layerGroups, depth, config) => {
+    // 1. 按父节点分组
     const groupMap = {}
     nodes.forEach(node => {
       const parentName = node.parent?.data?.name || 'unknown'
@@ -105,39 +106,40 @@ export function useTreeLayout() {
     const groupKeys = Object.keys(groupMap)
     const groupNodes = groupKeys.map(key => groupMap[key])
 
+    // 2. 计算每组宽度
     const groupWidths = groupNodes.map(group => (group.length > 0 ? (group.length - 1) * config.nodeSpacing : 0))
-    let totalGroupsWidth = groupWidths.reduce((a, b) => a + b, 0)
-    let totalGapWidth = config.groupGap * (groupNodes.length - 1)
-    let totalWidth = totalGroupsWidth + totalGapWidth
-    
-    let prevLayerWidth = standardWidth
-    let x = firstLayerMinX
-    if (totalWidth > prevLayerWidth) {
-      x = firstLayerMinX
-    } else {
-      x = firstLayerMinX + (prevLayerWidth - totalWidth) / 2
+    const groupCenters = groupNodes.map(group => group[0].parent?.x ?? 0) // 父节点x
+
+    // 3. 先让每组中心对齐父节点x
+    let groupStartXs = groupNodes.map((group, i) => groupCenters[i] - groupWidths[i] / 2)
+
+    // 4. 检查重叠并调整：从左到右依次排，保证每组之间有最小间隔
+    const minGap = config.groupGap
+    for (let i = 1; i < groupStartXs.length; i++) {
+      const prevEnd = groupStartXs[i-1] + groupWidths[i-1]
+      if (groupStartXs[i] < prevEnd + minGap) {
+        groupStartXs[i] = prevEnd + minGap
+      }
     }
 
+    // 5. 如果整体超出standardWidth，则整体居中
+    let minStart = Math.min(...groupStartXs)
+    let maxEnd = Math.max(...groupStartXs.map((startX, i) => startX + groupWidths[i]))
+    let totalWidth = maxEnd - minStart
+    let offset = 0
+    if (totalWidth < standardWidth) {
+      offset = firstLayerMinX + (standardWidth - totalWidth) / 2 - minStart
+    } else {
+      offset = firstLayerMinX - minStart
+    }
+    groupStartXs = groupStartXs.map(x => x + offset)
+
+    // 6. 依次布局每组节点
     groupNodes.forEach((group, i) => {
+      const startX = groupStartXs[i]
       group.forEach((node, j) => {
-        node.x = x + j * config.nodeSpacing
+        node.x = startX + j * config.nodeSpacing
       })
-      
-      if (group.length > 0) {
-        const minX = Math.min(...group.map(n => n.x))
-        const maxX = Math.max(...group.map(n => n.x))
-        d3.select(layerGroups.nodes()[depth])
-          .append("rect")
-          .attr("class", `cat-rect cat-rect-layer${depth}`)
-          .attr("x", minX + 100 - 0.5)
-          .attr("y", group[0].y + 60 + (config.nodeHeight + 400) / 2 - 15)
-          .attr("width", (maxX - minX) + 1)
-          .attr("height", 30)
-          .attr("fill", d3.schemeCategory10[i % d3.schemeCategory10.length])
-          .attr("opacity", 0.7)
-          .lower()
-      }
-      x += groupWidths[i] + config.groupGap
     })
   }
 
