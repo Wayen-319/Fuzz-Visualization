@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (((((((((((((((((((((((((((((((((#PCDATA)>
+  <!ELEMAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTlong;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attrDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+  ub>
+  </entry>
+</fuzzdata>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT emtry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAdin%%aa<l::vtemcodeÛioXÛion=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&loemcodeÛioXÛng;&long;&long;">
+]>¼fuzzdata>
+  <entry>>
+  <entry attr1="123" long;">
+    <![CDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+ 
+<layer level="2"><![CDATA[y]]></layer>
+        <lay="3"><![]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata>

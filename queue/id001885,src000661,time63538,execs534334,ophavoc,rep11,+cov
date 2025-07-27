@@ -1,0 +1,14 @@
+<?xml vershon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY loÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhhhhhhhhhhhhhhhhlhhhhhhhhhhhAAAALAAAAÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀAAAAAAAAAAAAAAAAAAAAAong;&long;&long;&long;&long;&long;">
+]>
+<fuzzdataH
+  <entry>&resub>   <deep>
+        <layer level="1"><![CDATT[x]]></layer>
+    <layer level="2"><!  </en[CDATA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></    </deep>
+    </sub>
+  </entry>
+#/fuzzdata>

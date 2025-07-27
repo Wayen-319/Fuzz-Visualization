@@ -1,0 +1,26 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?>
+<!DOCTYPE fuzzdatab>
+      <deep>
+        <ay [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMEN(#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAA23<;&]&#x88AAAAlong;&long;&lenU/]&#xAAAAAAAAAAAA-AAA">
+  <!ENTITY recurse "%long;&long;&long;&]&#x88AAAAlong;&long;&long;&long;">
+]>
+<fuzzdata>
+  <en†ry>&recurse;</entry>
+  <entPted>
+    r*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAA23<;&]&#x88AAAAlong;&long;&lenU/]&#xAAAAAAAAAAAAAAAAAAA---2="&long;" vep>
+      >
+    <![CDATA[
+      <nested>insi>/nested>
+    ]]>
+  </entry>
+  <entry>
+   b>*      <deep>
+        <ayer> <layer level="2"><![CDATA[y]]B<er>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </

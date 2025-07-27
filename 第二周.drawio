@@ -1,0 +1,152 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.9">
+  <diagram name="第 1 页" id="zX_rbspTTEWSqQIZ17W7">
+    <mxGraphModel dx="1461" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mBhMtEvppETFCREE8Xgm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-1" target="mBhMtEvppETFCREE8Xgm-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;尽可能找到更多bug&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;尽可能提高代码覆盖率&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="150" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-2" target="mBhMtEvppETFCREE8Xgm-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-2" target="mBhMtEvppETFCREE8Xgm-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-2" target="mBhMtEvppETFCREE8Xgm-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-2" target="mBhMtEvppETFCREE8Xgm-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-2" target="mBhMtEvppETFCREE8Xgm-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-2" target="mBhMtEvppETFCREE8Xgm-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_0&quot; class=&quot;ts-alignment-element&quot;&gt;允许&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_1&quot; class=&quot;ts-alignment-element&quot;&gt;交互式&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_2&quot; class=&quot;ts-alignment-element&quot;&gt;调整&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_3&quot; class=&quot;ts-alignment-element&quot;&gt;和&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_4&quot; class=&quot;ts-alignment-element&quot;&gt;检查&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_5&quot; class=&quot;ts-alignment-element&quot;&gt;模糊&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_6&quot; class=&quot;ts-alignment-element&quot;&gt;测试&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_7&quot; class=&quot;ts-alignment-element&quot;&gt;结果&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_8&quot; class=&quot;ts-alignment-element&quot;&gt;。&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: rgb(239, 246, 255);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_9&quot; class=&quot;ts-alignment-element&quot;&gt;在&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_10&quot; class=&quot;ts-alignment-element&quot;&gt;交互&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_11&quot; class=&quot;ts-alignment-element&quot;&gt;历史记录&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_12&quot; class=&quot;ts-alignment-element&quot;&gt;中&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_13&quot; class=&quot;ts-alignment-element&quot;&gt;可视化&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_14&quot; class=&quot;ts-alignment-element&quot;&gt;调整&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_15&quot; class=&quot;ts-alignment-element&quot;&gt;和&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_16&quot; class=&quot;ts-alignment-element&quot;&gt;输出&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_17&quot; class=&quot;ts-alignment-element&quot;&gt;更改&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Segoe UI Web (West European)&amp;quot;, &amp;quot;Segoe UI&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; white-space-collapse: preserve; background-color: transparent;&quot; data-is-focusable=&quot;true&quot; id=&quot;tgtAlignment_18&quot; class=&quot;ts-alignment-element&quot;&gt;之间的关系。&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="140" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-4" target="mBhMtEvppETFCREE8Xgm-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;力导向图（或path-growing graphs）&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;绘制种子的实际执行路径。&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;记录&lt;/font&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 14px; text-align: start;&quot;&gt;探索执行路径的能力和平均执行时间&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="300" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;控制流图&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;函数命中频率&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-8" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;表格&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;CPUstate信息&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-10" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;断点&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;获取所需内存或寄存器信息&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-12" target="mBhMtEvppETFCREE8Xgm-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-12" target="mBhMtEvppETFCREE8Xgm-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-12" target="mBhMtEvppETFCREE8Xgm-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-12" target="mBhMtEvppETFCREE8Xgm-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-12" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;查看遇到的瓶颈&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="65" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-15" target="mBhMtEvppETFCREE8Xgm-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mBhMtEvppETFCREE8Xgm-15" target="hO0BiEQVURzs5dWjZGLD-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mBhMtEvppETFCREE8Xgm-15" target="hO0BiEQVURzs5dWjZGLD-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mBhMtEvppETFCREE8Xgm-15" target="hO0BiEQVURzs5dWjZGLD-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mBhMtEvppETFCREE8Xgm-15" target="hO0BiEQVURzs5dWjZGLD-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="mBhMtEvppETFCREE8Xgm-15" target="hO0BiEQVURzs5dWjZGLD-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-15" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;生成种子&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-17" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;生成全新的种子&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mBhMtEvppETFCREE8Xgm-18" target="mBhMtEvppETFCREE8Xgm-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-18" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;根据限制生成种子&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-21" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;执行特定路径&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-23" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;当前日志信息&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="840" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-25" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;更改种子。提高路径覆盖率&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="584.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-27" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;关注低命中率函数&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-29" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;获取整个fuzzing的历史记录，根据记录调整&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="293.5" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mBhMtEvppETFCREE8Xgm-31" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;根据CPU、内存使用情况调整&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="471" as="sourcePoint" />
+            <mxPoint x="750" y="586" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="541" />
+              <mxPoint x="750" y="541" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;随机修改&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;字节反转&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;插入/删除字节&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hO0BiEQVURzs5dWjZGLD-4" target="mBhMtEvppETFCREE8Xgm-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-4" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;字段替代&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;删除字段&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;同义替换&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;插入空格或注释&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="410" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hO0BiEQVURzs5dWjZGLD-5" target="mBhMtEvppETFCREE8Xgm-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-5" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;覆盖率引导（Coverage-Guided Mutation）&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;优先测试未探索的分支&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="410" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hO0BiEQVURzs5dWjZGLD-6" target="mBhMtEvppETFCREE8Xgm-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-6" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;随机改变字节序列中特定的比特组合&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;故意生成语法无效输入&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="410" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hO0BiEQVURzs5dWjZGLD-7" target="mBhMtEvppETFCREE8Xgm-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hO0BiEQVURzs5dWjZGLD-7" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;模型训练可能触发bug的输入&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;遗传算法&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="410" width="150" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

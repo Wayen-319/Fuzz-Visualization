@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAsted>inside CDATA</nestAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;<<<<<<<<<</lay[x]]></layer>">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <!recurse "&l[CDATA[
+      <neAAAAAAAAAAAAAAAAAAAAAAAed>
+    ]]>
+  </entry>
+  <entry>
+   ep>
+        <layer level="1"><![r>
+     ub>
+
+  <entry attr1="123DATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </[ub>
+  </entry>
+</fuzzdata>

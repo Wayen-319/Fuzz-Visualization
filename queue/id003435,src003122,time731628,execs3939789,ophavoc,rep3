@@ -1,0 +1,16 @@
+<?xml verTY recurse "&long;&long;&long;&long;&long;&losion="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "Ae>&recuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAAAAAAAAAAAAAA<<<<<<<<<<<<<<<<<<<<<<&long;">
+]>
+<fuzzdata>
+  <entry>ong;&long;&lotryted>
+    ]]>
+  </entry>
+  <entry>
+<sub>
+   r level="3"><![CDATA[ττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττp>
+    </sub<
+long;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry

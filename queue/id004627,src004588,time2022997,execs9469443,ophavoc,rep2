@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <?ELEMENT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <m
+
+
+
+
+m-8"?>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+
+
+><![CDATA[y]]></layer>
+er estede;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDATA</nlevel="3y]]></layer>
+   "><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdat="1.0" encoding="UTF-8"?>
+a>>>>>>>>>>>>>

@@ -1,0 +1,8 @@
+<?pml version="1.8" encoding="UT?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (eEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*)>
+  <!ELEMENT entry ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((( ((((((((((((((((,(,(((((((((((((((p>
+ level="3"><![CDATA[y]]+</layer>
+        <layer    </sub>
+  </entry>
+</fuzzdata

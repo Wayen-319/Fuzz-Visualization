@@ -1,0 +1,23 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAA23<;&]&#x88AAAAlong;&long;&lenU/]&#;&lenU/]&#x8888888888888888888888888888888888888888888888888888888888888888888888888888long;&long;&long;">
+]>
+<fu   r2="&long;">
+    <![CDAg="UTF-8"?>
+<!DOCTYPsi>/nested>
+    ]]>
+  </entry>
+  <entry>
+   b>
+     nested>
+    ]ntry>
+  <entry>
+   b>
+      <deep>
+        <ayer>[        <layer lev<e/>
+        P<<<<<A[ylayer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+  

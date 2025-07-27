@@ -1,0 +1,23 @@
+<?xm<entry attr1="123DATA[y]]></layl versiAAAAAAAAAencoooooooooooooooooooooooooooooooooa [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTSTY recurse "&AAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+ ersiAAAAAA <entry>&recurse;</entry>
+  Ãentry attr1="123" attr2="&long;">
+    <![CDATA[
+   ed>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+  <deep> <layer level="1"><![CDATA[x]]></layer>
+    <layer level="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+ ÿ</deep>
+    </sub>
+  </entry>
+</fuzzdaƒa>

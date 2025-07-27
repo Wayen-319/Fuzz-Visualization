@@ -1,0 +1,16 @@
+<?xml verTY recurse "&long;&long;&long;&long;&long;&losion="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAAALAAAAAAAAAAA">
+  <!ENTITY recurse "&lonüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüü" att
+    <![CDATA[
+      <neôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôôöôôôôôôôôôôôôôôôôôôôôôôAAIIb<
+long;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (en_ry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+       

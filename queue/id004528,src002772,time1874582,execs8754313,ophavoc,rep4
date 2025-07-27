@@ -1,0 +1,16 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long>%%%%%%%%%%%%%%%%%b>
+  "1.0Û&r emcodinnlonPC%%&lonPEzzdata (en|ry*) >
+  <!ELEMENT e <%%="&long;"ÿÿ    <![CDATA[
+      <nested>insi>/nested>
+    ]]>
+  </entry>
+  <entry>
+ ) b>
+      <deep>
+        <ayer>[   entrted>
+    r2="&lon><![CDATA[y]]BM/layer>
+        <layer level=

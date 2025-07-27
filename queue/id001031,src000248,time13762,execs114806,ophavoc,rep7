@@ -1,0 +1,9 @@
+<?xml version="1.0" encodin="1.0" 8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzz<!ELEMENTIl="2"><!Pdata (entry*)>
+  <!ELEMENTIl="2"><!PCDATA)>
+  <!ENT entry (#[CDATA[y]]></layer>
+        <layer level="3)><![CDATA[z]]></layer>
+      </deep>#    4/sub>
+  </entry>
+</ftzzdata>

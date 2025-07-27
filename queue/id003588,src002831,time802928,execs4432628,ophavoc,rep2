@@ -1,0 +1,15 @@
+<?wml ve.0" ding="UTF-8"?>
+<!DOCTYPE fuzzdataА[
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA|>
+  <!ENTITY long "AAA;&]&#x88AAA%long;&long;&lenU/]&#x88AAAAAAAAAAAAAAAAA------AA">
+  <!ENTITY recurse "%long;AA">
+  <!ENTITY recurse "%long;&long;&long;&&#x88A&long;&lITY reAAA;&]&#x88AAA%long;&long;&SenU/]&#x88AAAAAAAAAAAAAAAAAAAAA------AA">
+  <!ENTITY recurse "%long;AA">
+  <!ENTITcurse "%long;&long;&g;&lon0" eNsoding="UT <e&long;"€€    <![CDATA[
+      <nes€€€€insi>/T oooooooo <!E>  <!ELE<!----]>
+<fu <entry>
+   b>ииииииииииииииииииииииDATA[
+      <deep>
+  -     <ayer>[  иииииииииииииииииииииииииииDATA[y]]BХ/layer>
+     

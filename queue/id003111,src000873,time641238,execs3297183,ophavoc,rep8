@@ -1,0 +1,14 @@
+<?xml version="1.000000000000000000000000000000000000000000000" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!&NTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAA¾AAAA!ENTITY recu;&long;&long;&lLng;&;&long;">
+]>
+<fu  <entry>&relevel="2"><![CDATA[y]]></lay    <layer level="3"><![CDATA[z]]><g;">
+    <![CDATA[
+      <nesdeep>
+        <layer lev/layer>
+        <layer level><![CDATA[z]]></layer>
+  </deep>
+    </sub>
+long;&long;</fuzzdata>

@@ -1,0 +1,15 @@
+<?xml versio  "1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAA23<enU/]&#x88AAAA8888888888888AAAAAAAAAAAAA----------AAA">
+  <!ENTITY recurˆe "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry*attr1="123" attr2="&long;">
+    <![CDATA[
+      <nestevel="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </su

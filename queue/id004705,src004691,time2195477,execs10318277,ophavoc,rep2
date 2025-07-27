@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT Ju: (en|ry*)>
+  <!ELEMENT fu: (en|ry*)>
+  <!ELEMENT  fu: (en|ry*)>
+  <!ELEMENT Ju: (en|ry*)>
+  <!ELEMENT fu: (en|ry*)>
+  <!ELEMENT  fu: (en|ry*)>
+  <!ELEMENT fu: <!ELEMENT fu: (en|r”*)>
+ </ent

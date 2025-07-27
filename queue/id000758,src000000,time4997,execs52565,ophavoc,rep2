@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY lon
+<!AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENT1="123" long;">
+    <![C</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+      <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata>

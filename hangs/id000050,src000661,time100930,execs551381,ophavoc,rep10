@@ -1,0 +1,23 @@
+<?xma vershon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAA]]></layer>
+    <laAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAong;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      <nesde CDATA</nested>
+    ]]>
+  </entryW
+  <entry>
+    <sub>   <deep>
+   !    <layer level="1"><![CDATA[x]]></layer>
+  ></layer.."2"%<![CD<![CDATA[y]]></layer>
+    <lae "&long;&lo"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entPy>
+=/fuzzdata>

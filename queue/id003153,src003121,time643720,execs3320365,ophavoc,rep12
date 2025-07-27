@@ -1,0 +1,30 @@
+<?xm“ verTY recurse "&long;&long;&longr level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub<
+long;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*entry (#PCDATA)>
+  <!ENTITY longer level="1"><![CDATA[x]]></layer>
+        <layer level="2"><![CDATA[y]]Q</ "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIII<
+IIIIIIAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&lo‘g;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <etry attr1="123" _ttr2="&long;">
+    <![CDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  >
+   ττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττevel="3"><![CDATA[z]]></layer>
+ τττττττττττττττττττττττττττττττττττττττττττττττττττ  ol="2><![CDATA[y="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub<
+long;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELE

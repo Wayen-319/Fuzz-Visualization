@@ -1,0 +1,9 @@
+
+  <!ENTIrsirecurse "&long;<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENCDATA[x]]></layer>
+        <layer level="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+ 

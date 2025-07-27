@@ -1,0 +1,79 @@
+<?xmL version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</<?xmL version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAA.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENTa (entry*)>
+  <!ENT 
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</<?xmL versioion="1.0" encoding="UTF-8"?>
+<!DOCTdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAA.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENTa (entry*)>
+  <!ENT 
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&longT&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</<?xmL version="1.0" encoding="UTF-8"?>
+<!DOzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMy (#PCDATA)>
+  <!ENTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA¾AAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entrÎ attr1="123" attr2="&long;"> <![CDATA[
+     CDATA</nvel="3"><![CDATA[z]    <sub>
+
+  </deep>
+    </sub>
+  </entry>
+</fuzzdata>AAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;ng="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzd&long;">
+]>
+<fu    <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata>
+entry>
+  <e     <nesde CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <den="1.0" encoding="UTF-8"?>
+<!DOzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMy (#PCDATA)>
+  <!ENTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAattr2="&long;">
+    <![CDATA[
+      <nesde CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+        <layer level="1"><![CDATA[x]]></layer>
+    <layer level="2"><![CDATA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+      </deep>

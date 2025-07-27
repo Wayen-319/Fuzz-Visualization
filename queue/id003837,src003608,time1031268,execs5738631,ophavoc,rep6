@@ -1,0 +1,29 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAA;&]&#x88long;&lo/]&#;AAA<;&]&#x8Along;&lon?>
+<!DOCTYata [
+;&ng;&]&#x88AAA&#x88AAAAlong;&lonzdata>
+  <entry>&recurse;</entry>
+  <enA">
+  <!ENTITY recurfe "%long;&long;&lAlon&lenU/]&  <!ELEMENT uzzÿÿ(fug;&lenU/]&#;&lenU/]&#x88AAAAAAAAAAA--AAA">
+  <!ENTITY recurfe "%long;&ng;&]&#x88AAA&#x88AAAAlong;&lon\data>
+  <entry>&recurse;</entry>
+  <enA">
+  <!ENTITY recurfe "%long;&long;&lAl…n&lenU/]&#x88AAAAAAAAAAA--AAA">
+  <!ENTITY recurfe "%long;&long;&long;&]&#x88AAAAlong;&l[ng;&long;&long;">
+]>
+<fuzzdata>
+  <en†ry>      inside CDAT
+  <entrted>
+   "&long;">
+    <![CDATA[
+      <nested>insi>/nested>
+   ]]>
+  </entry>
+      <deep>
+        <ayer>[        <layer level="2"><![CDATA[y]]B</layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </

@@ -1,0 +1,18 @@
+<?xml versIon="1.0" encodifg="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entryÿ)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "">
+  <!ENTITY rec
+  <!ENTITY loââââââââââââââââng "AAAAAAAAA123<en&#8888888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;ATA[z]]]]]]]]]]]]]]></la&long4&longÿÿÿng;&long;">
+]>
+<fuzzdata>
+  <elayer level="ntry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+<![CDATA[
+    ayer level="1"><![CDATA[x]]></layer>
+        <la“er level="2"><![CDATATY recurs "">
+  <!ENTITY recurse  <!ENTITY recurs%"">
+  <!ENTITY rng "">
+  <!EN     <layer lev  <!ENTITY lng "el="2"><![CDATA[y

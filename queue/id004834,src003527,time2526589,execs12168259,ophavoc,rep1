@@ -1,0 +1,8 @@
+<?xml version="1.8" encoding="UTF-7"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (eEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*)>
+  <!ELEMENT entry (((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,(((((( ((((((((((((((((,(((((((((((((((((p>
+ level="3"><![CDATA[y]]+</layer>
+          </sub>
+  </entry>
+</fuzzdata

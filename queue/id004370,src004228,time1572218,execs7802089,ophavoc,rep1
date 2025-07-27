@@ -1,0 +1,8 @@
+<?wml ve.0" ding="UTF-8"?>
+<!DOCTYPE fuzzdata€[
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA|PCDATA|PC
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA|PCDATA|PCDATAÄ>
+  <!ENTITY lo   <!ELEMENT entry (#PCDATA|PCDATAÄ>
+  <!ENTITY lo   <!ELEMENT entry (#PCDATA|PC     <la

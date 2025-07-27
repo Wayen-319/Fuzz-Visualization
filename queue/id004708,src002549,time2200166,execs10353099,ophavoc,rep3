@@ -1,0 +1,14 @@
+<?xml ve1.0Û emcoding="UTF8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (en|ry:)>
+  <!ELEMENT  nuata (en|r|ry:)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛr|ry:)>
+  <!ELEMENT enuata (en|ry:)>
+    <!ELEMENT  nuata (en|r|ry:)>
+  <!ELEMENT enuata (en|(en|ry:)><!ENTI"CDAT%[y]?="     <laùer level="3">Z”[CDATA[z]]></laye</deep>
+    </AAAA">s attr2="&    <![CDATA[
+      <nested>inside CDATAentry>
+    <sub>
+      <deeppppp      <layer level="1><![CDATA[     <layer level="2"><![CDATA[y]]></layer>
+        <layer

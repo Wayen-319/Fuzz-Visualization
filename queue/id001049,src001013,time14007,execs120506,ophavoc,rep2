@@ -1,0 +1,6 @@
+<?  <entry>g;&long;xml version="1.0Û emcoding="UTF8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (en|ry*)>
+  <!ELEMENT enury (#PCDATA)>
+  <!ENTIl="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>

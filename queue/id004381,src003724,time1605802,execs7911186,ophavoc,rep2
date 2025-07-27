@@ -1,0 +1,33 @@
+<?xmCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAGGGGGGGGGGGGGGGGGGGGGg;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (entryAAAAAAAAAAAAAA">τττττττττττττττττττττττ;"    <nested>inside CDATA</nested>
+ [CDATA[
+      ]]>
+  </entry>
+  <entng="UTF-8ÿÿ>
+<!DOCTYPττττττττττττττττττττττττττττττττττττττ&&&&&&&   <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entng="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzzata (entry*)>
+  <!ELEMENT	entry (#PCDATA)>
+  <!ENTITYττττtτττ<!ENTITYττττtτττττττττττττττττττττττττττττττττττ  <!ENTITYττττtτττ
+  <!ENTITY recurse "&long;&loqg;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&ττ </sub<
+long;&lonfuvel
+        <l΄yer leve="2"><![CDFTA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </s;&lonGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGg;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (entry*)AAAAAAAAAAAAY

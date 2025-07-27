@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu: (en|ry*)>
+  <!ELEMENT fu: (en|ry*)>
+  <!ELEMENT enuru: (en|ry*)>
+  <!ELEMENT enurENT etry>     <rub>
+      <d

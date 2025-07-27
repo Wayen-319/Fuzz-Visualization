@@ -1,0 +1,10 @@
+<?xml version="1.000000000000000000000000000000000uzzdata [
+AAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recur:e "&long;&long;&long;&long;&long;&long>&recurse;</entry>
+  <enayer level="1"><![CDATA[x]]></layer>
+        <layer level="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdat

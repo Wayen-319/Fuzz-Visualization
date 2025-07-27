@@ -1,0 +1,17 @@
+<?xml vgrsion="1*0" Fncoding="STF-8"?>
+<!DOCTYPE funside  [
+  <!ELEMENT fXXXXXXXXuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY longùùùùùùù "AAAAAb>
+yyyyyem%AAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY% recurse "&long;&long;&long  &>
+  <yyyem%&>
+  <%%%AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY% recurse "&long;&long;&long  <![CDATA[
+d>insid!ENfITY% rece CDATA</nested>
+    ]]>AAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY% recurse "&      <layer level="1"><![CDATA[x]]></<![CDATA[y]]><?laylayer>
+      layer level="1"><![CDATA[x]]></layer>
+        <layer level="2"><![CDATA[y]]></la]D>>>>>>>>layer///////////////////////ub>
+  </entry>
+</fuzzdata>

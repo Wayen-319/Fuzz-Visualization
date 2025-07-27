@@ -1,0 +1,6 @@
+<?xml version="1.8" encoding="UTF-7"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (eEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEntry*)>
+  <!ELEMENT entry ((((((((((((((((,(((((((((((((((((EEEEEEEEEEEEEEEEEEEEEEEEry*)>
+  <!ELEMENT entry ((((((((((EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEntry*)>
+  <!ELEMENT entry ((((((((((((Entry*)ð

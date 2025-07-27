@@ -1,0 +1,22 @@
+<?xtrml vers"1.0" eNUTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fubbbbbbbbbbbb:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAA23<;&]&#x88AAAAlong;&long;&lenU/]&#x88AAAAAAAAAAAAAAAAAAA--------AAA">
+  <!ENTITY recurse "%long;&long;&long;&]&#x88AAAAlong;&long;&long;&l}ng;">
+]>
+<fuzzdata>
+  <en†ry>&recurse;</entry>
+  <ent
+  <entrrted>
+    r2="&long;">
+    <![CDATA[
+      <nested>insi>/nested>
+  </entry>
+  <entry>
+   b>
+      <deep>
+        <ayer>[        <layer level="2"><![CDATA[y]]B</layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </

@@ -1,0 +1,22 @@
+<?xMl1ver?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry<?xMl9versio (#PCDATA)>
+  <!ENTITY long "AAA$A¾AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  ×××××××××××××××××××××××××××××××××××××××××××××××××××××××××urse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <en-mmm-8"?>
+<?zm-mmm-8"?>
+
+<?xml="2"><![CDATA[y]]></ </sub>-mattr1="123" attr2="&long;">
+    <![CDATA[
+      <nesde CDATA</neste]&#x8888AA;&lonentry>
+  <entry>
+    <sub>
+      <deep>
+        <layer level="1"><![CDATA[x]]></layer>
+    <layer level="2">
+        <layer level="3"><!ayer level="3"><![CDATA[z]er level="2"><![CDATA[y]]></ </sub>
+  </entry>
+</fuzzdatÿ€

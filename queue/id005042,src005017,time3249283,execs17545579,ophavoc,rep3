@@ -1,0 +1,199 @@
+<?xmCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (ent{y*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAB?>
+
+
+<?xm-mm
+m-8"?>
+
+<?x
+<!DOCTY>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+!DO
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+
+
+
+
+<
+m-8B?<?xm-mm
+m-8"?>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8B?>
+
+
+
+
+
+
+<?xm-mm
+
+-8"?>
+
+<?x
+
+
+
+
+<!DOCTY>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+   <![CDAfuzzdata [
+  <!ELEMENT fuzzdata (ent{y*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAB?>
+
+
+
+
+
+
+<?xm-mm
+m-8"?>
+
+<?x
+<!DOCTY>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+!DO
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+
+
+
+
+<
+m-8B?<?xm-mm
+m-8"?>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8B?>
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+
+
+
+
+<!DOCTY>
+
+
+
+
+
+
+<?xm-mm
+
+
+
+
+m-8"?>
+
+<?x
+   <![CDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entng="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITYττττtττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττ </sub<
+longnfuv![CDATA[  </deep>
+    </s;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+       TA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entrrrrrrrrrrrrrrrrrrrrrry>
+  <entng="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entr&lonfuvel="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </s;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (entry*)AAAAAAAAAAAAYP  

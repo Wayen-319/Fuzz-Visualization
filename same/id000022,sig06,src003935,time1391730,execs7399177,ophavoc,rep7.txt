@@ -1,0 +1,67 @@
+=================================================================
+==174397==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61900000000e at pc 0x55915ff5091b bp 0x7ffcfd6f1de0 sp 0x7ffcfd6f1dd8
+READ of size 1 at 0x61900000000e thread T0
+    #0 0x55915ff5091a in xmlDictComputeFastQKey /home/spark/libxml2-2.9.2/dict.c:489:18
+    #1 0x55915ff4e51f in xmlDictQLookup /home/spark/libxml2-2.9.2/dict.c:1093:12
+    #2 0x55915ff5dadc in xmlSAX2StartElementNs /home/spark/libxml2-2.9.2/SAX2.c:2238:17
+    #3 0x55915fd1b600 in xmlParseStartTag2 /home/spark/libxml2-2.9.2/parser.c:9707:6
+    #4 0x55915fd12624 in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10069:16
+    #5 0x55915fd11096 in xmlParseContent /home/spark/libxml2-2.9.2/parser.c:9982:6
+    #6 0x55915fd130ec in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10155:5
+    #7 0x55915fd11096 in xmlParseContent /home/spark/libxml2-2.9.2/parser.c:9982:6
+    #8 0x55915fd130ec in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10155:5
+    #9 0x55915fd11096 in xmlParseContent /home/spark/libxml2-2.9.2/parser.c:9982:6
+    #10 0x55915fd130ec in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10155:5
+    #11 0x55915fd11096 in xmlParseContent /home/spark/libxml2-2.9.2/parser.c:9982:6
+    #12 0x55915fd130ec in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10155:5
+    #13 0x55915fd11096 in xmlParseContent /home/spark/libxml2-2.9.2/parser.c:9982:6
+    #14 0x55915fd130ec in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10155:5
+    #15 0x55915fd22c6a in xmlParseDocument /home/spark/libxml2-2.9.2/parser.c:10841:2
+    #16 0x55915fd3eccf in xmlDoRead /home/spark/libxml2-2.9.2/parser.c:15298:5
+    #17 0x55915fcc310c in LLVMFuzzerTestOneInput /home/spark/fuzzer-test-suite/libxml2-v2.9.2/target.cc:14:18
+    #18 0x55915fcc305d in ExecuteFilesOnyByOne /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c:260:7
+    #19 0x55915fcc2e4d in LLVMFuzzerRunDriver /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c
+    #20 0x55915fcc29dd in main /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c:316:10
+    #21 0x7f3247a2bd8f in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #22 0x7f3247a2be3f in __libc_start_main csu/../csu/libc-start.c:392:3
+    #23 0x55915fc026a4 in _start (/home/spark/fuzzer-test-suite/libxml2-v2.9.2/xml_fuzz+0xb96a4) (BuildId: 71ba520ee994801d1e928f0b66d5e79a2b98035f)
+
+0x61900000000e is located 114 bytes to the left of 1048-byte region [0x619000000080,0x619000000498)
+allocated by thread T0 here:
+    #0 0x55915fc854ee in malloc (/home/spark/fuzzer-test-suite/libxml2-v2.9.2/xml_fuzz+0x13c4ee) (BuildId: 71ba520ee994801d1e928f0b66d5e79a2b98035f)
+    #1 0x55915ff4a7b3 in xmlDictAddString /home/spark/libxml2-2.9.2/dict.c:270:29
+    #2 0x55915ff4a7b3 in xmlDictLookup /home/spark/libxml2-2.9.2/dict.c:923:11
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/spark/libxml2-2.9.2/dict.c:489:18 in xmlDictComputeFastQKey
+Shadow bytes around the buggy address:
+  0x0c327fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c327fff8000: fa[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==174397==ABORTING

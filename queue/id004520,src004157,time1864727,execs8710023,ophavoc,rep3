@@ -1,0 +1,14 @@
+<I:epat>€ÿÿÿÿÿÿÿÿDDDDD€ÿÿÿÿÿÿÿÿDÿÿÿÿÿÿÿ&#x888;&loDÿÿÿÿÿÿÿ&#x888;&longþ Dog=""123<enU/ÿ&#x888;&lon888888ngþ D<enU/ÿ&#x888;&lon8888883<enU/]&#x888;&long;&ÿÿÿÿÿÿÿ&#x888;&loDÿÿÿÿÿÿÿ&#x888;&longþ DA >€ÿÿÿÿDDDDDÿDDÿÿÿÿ;&loDÿÿÿÿÿÿÿ&#x888;&longþ DA123<VnU/ÿ&#x888;&lon888888ngþ D"123<enU/ÿ&#x888;&lon8888883<enU/&long;&ÿÿÿÿÿÿÿ&#x888;&loDÿÿÿÿÿÿÿ&#x888;&longþ DAg=""123<enU/ÿ&#x888;&lon888888ngþ DA ding=""123<enU/ÿ&#x888;&lon8888883<enU/ding=""123<enU/ÿ&#x888;&lon888888ngþ DA ding="epat>€ÿÿÿÿÿÿÿÿDDDDDÿDÿ;&loDÿÿEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzz$ata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry> <sub>
+  <deep>
+      ÿÿÿÿÿ&#x888;&longþ Dng=""123<enU/ÿ&#x888;&lon888888ngþ D<enU/ÿ&#x888;&lon8888883<enU/]&#x888;&long;&ÿÿÿÿÿÿÿ&#x888;&loDÿÿÿÿÿÿÿ&#x888;&longþ DA >€ÿÿÿÿDDDDDÿDDÿÿÿÿ;&loDÿÿÿÿÿÿÿ&#x888;&longþ DA123<VnU/ÿ&#x888;&lon888888ngþ D"123<enU/ÿ&#x888;&lon8888883<enU/]&#x888;&long;&ÿÿÿÿÿÿÿ&#x888;&loDÿÿÿÿÿÿÿ&#x888;&longþ DAg=""123<enU/ÿ&#x888;&lon888888ngþ DA ding=""123<enU/ÿ&#x888;&lon8888883<enU/ding=""123<enU/ÿ&#x888;&lon888888ngþ DA ding=""123<enU/ÿ&#x888;&lon8888883<enU/]&#x888;&long;&8"123<enU/ÿ&#x888;&lon8888883<enU/]&#x888;&long;&88

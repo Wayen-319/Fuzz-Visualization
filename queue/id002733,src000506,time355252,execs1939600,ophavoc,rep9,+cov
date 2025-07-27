@@ -1,0 +1,15 @@
+<?xml ver/xon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzztata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+ ÿŒŒ <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fu>€ÿÿÿÿÿÿèÿong;">AAAAAAAAAAAAcAAAAAAA
+    <![CDATA[nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+  

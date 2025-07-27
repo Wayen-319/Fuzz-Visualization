@@ -1,0 +1,18 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAA;&]&#x88AAAAlong;&long;&lenU/]&#x88AAAAAAAAAAAAA----------AAA">
+  <!ENTITY recurse "%long;&long:&long;&&#x888888888888888888888888888888ong;&long;&g;&long;">
+]>
+<fuzzdecurse;</entry>
+  <entrted>
+    r2="&long;"ÿÿ<nested>insi>/nested>
+=   ]]>
+  </entry>
+  <entry>
+   b>
+      <deep>
+        <ayer>[   entrted>
+    r2="&lon><![CDAT'[y]]B</layer>
+       

@@ -1,0 +1,24 @@
+<?xMl versi=on="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry<?xMl versio (#PCDATA)>
+  <!ENTITY long "AAAAA¾AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!"2"ENTITY jecurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <en-mmm-8"?>
+<?zm mmm-8"?>
+
+<?xm-  <la“er level="2"><![Cmattr1="123" attr2="&long;">
+    <![CDATA[
+      <nesde CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+        <layer level="1"><![CDATA[x]]></layer>
+    <layer level="2">
+        <layer level="3"><!ayer level="3"><![CDATA[z]er level="2"><![CDATA[y]]></ </sub>
+  </entry>
+</fuzzdatÿ€

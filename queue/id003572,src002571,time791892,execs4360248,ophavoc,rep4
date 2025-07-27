@@ -1,0 +1,25 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?MENT fuzzdata (entry*)>
+     <deep>
+        <ay [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entr">(#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAA23<;&]&#x88AAAAlong;&long;&lenU/]&#xAAAAAAAAAAAAAAAAAAA----------AAA">
+  <!ENTITY recur@e "%long;&long;&long;&]&#x88AAAAlong;&long;&long;&long;">
+]>
+<fuzzdata>
+  <en†ry>&recurse;</entry>
+  <entPted>
+    r2="&long;" vep>
+      >
+    <![CDATA[
+      <nested>insi>/nested>
+    ]]>
+  </entry>
+  <entry>
+   b>
+      <dy (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAA23<;&]&#x88AAAAlong;&long;&lenU/]&#xAAAAAAAAAeep>
+    <ayer> <layer level="2"><![CDATA[y]]B<er>
+        <<![CDATA[z]]></layer>
+      </deep>
+    </

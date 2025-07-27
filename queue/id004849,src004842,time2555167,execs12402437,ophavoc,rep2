@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry+)>
+  <!ELEMENT entry  <!ELEMENT fuzzdata (ententry+)>
+  <!ELEMENT entry  <!ELEMENT fuzzdata (entry+)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long 1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA <!ELEMENT fuzzAAAAAAAAAA
+      <nested>d/nested>
+    ]]>
+1="123"="122="&="&""&::þ<A dia=&="&""&::þ<A dia="123" atterL="&" asfuzzdata=
+"U/s3" atiattr1[y]]></layer>
+        <laye>
+  </entry>
+  <entry>
+    <sub

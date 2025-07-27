@@ -1,0 +1,4 @@
+<?xml version="1.0" enbodiNg="UTF8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (e			nsidntry*)>
+  

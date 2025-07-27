@@ -1,0 +1,21 @@
+<?xmlCvTrsio  "1.0" eNep>
+  ayer>
+ coding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdut<?xmlCvTrsio a (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAADAA23<;&]&#x88AAAAlong;&long;&lenU/]&#x88AAAAAAAAAAAAAAAAAAAAA----------AAA"?
+  <!ENTITY recurse "%long;&long;&long;&&#x88AAAAlong;&long;&lITY recurse "%long;&long;&g;&long;">
+]>
+<fuzzdecurse;</entry>
+  <entrted>
+    r2="&long;"ÿÿ    <![CDATA[
+      <nested>ins>/nested>
+    ]]>
+  </entry>
+  <entry>
+   b>
+      <deep>
+        <ayer>[   entrted>
+    r2="&lon><![CDATA[y]]B</layer>
+        <layer level="3"><!

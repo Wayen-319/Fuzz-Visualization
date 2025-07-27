@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAry (#PCDATA)>
+  <!ENTIAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+ encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT data (entry*)>
+  <!ELEME (ÿÿATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ETITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&pecurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      DATA</ne>
+    ]]>
+  </entry>
+  <eotry>
+    <sub>   <deep>
+        <layer level=""><![CDATA[x]]></layer>
+        <layer level="&long;&long;&long;&long;&long;&long;&long;"zzdata>
+  <entry1="123" attr2="&DATA[
+      <nested>inside CDATA</nested>
+><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      <nesdATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+        <layer level=""><![CDATA[x]]></layer>
+        <layer level="&long;&long;&long;&long;&long;&long;&long;"zzdata>
+  <entry1="123" attr2="&DATA[
+      <nested>inside CDATA</nested>
+  2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata>

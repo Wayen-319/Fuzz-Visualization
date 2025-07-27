@@ -1,0 +1,21 @@
+<?xml vershon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAA?AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAŒng;&long;&longU&long;&long;&long;">
+]>
+<fuzzdata>
+  <enlong;&lon<layer level="3"g;&lonentry>
+  <entry attr1="123" attr2="&long;">
+                        <![CDATA[
+      <nesde CDATA</nested>
+    ]]>
+  ;/entry>
+  <entry>
+    <sub>   <deep>
+        <layer level="1"><![CDATA[x]]></layer>
+    <layer level="2"><![CDATTTTTTTTTTTTTTTTT   <layer level="3"><![CDATA[z]]></layer>
+      </dtep>
+    </sub>
+  </entry>
+</fuzzdata>

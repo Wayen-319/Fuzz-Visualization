@@ -1,0 +1,31 @@
+<?xml verTY recurse "&long;&long;&long;&long;&long;&losion="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzϊdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+[CDACDATd>&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&lfn!Jd<? <'  <![CDACD[
+<?<   <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;"> <![CDATA[
+   ed>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+<sub>
+   r level="3"><![CDATA[z]]></layer>
+      </deep>
+   ττττττ΄ττττττττττττττττττττττττττττττττττττuzzdata>
+  <Vlayer level="ntry>&recurse;ττττττττττττττττττττττττττττττττττττττττττττττττιτττττττττττττττ </sub<
+long;&long;<rse "&l;&Yu/fub>
+ίITlong;&l &l   <!ELE<!----vel="2"><![CDATA[y]]></laye€>
+        <layer level="3"<!E[CDATA[z]]></layer>
+      </deep>
+    </sub<
+long;&llllllllllllllllllllllllllllllllllllllllllry*)>
+  <!ELbMENT a (entry*)>
+  <!ELEMENT
+        < (entry*)>
+  <τττττττττττττττττττττττττττιτENT
+        <laAAAAAAAlaAAAAAAAAAAAAAAAAAA

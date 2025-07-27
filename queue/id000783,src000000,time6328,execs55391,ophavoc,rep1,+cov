@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ATENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY relong;&long;&long;&long;&long;&lotr1="123" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDA <entry>
+    <sub>
+      <deep>
+z]]></layer>
+      </deep>
+    <

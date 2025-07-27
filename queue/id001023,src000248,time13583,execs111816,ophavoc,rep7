@@ -1,0 +1,11 @@
+<?xml ventry>
+  <entry attr1="123" att>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTIl="2"><![CDATA[y]]></layer>
+              <layr>
+      </deep>
+<![CKATA[z]]></layer>
+      </deep>
+  ata>

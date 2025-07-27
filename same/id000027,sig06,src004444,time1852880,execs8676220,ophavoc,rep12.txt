@@ -1,0 +1,56 @@
+=================================================================
+==174370==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000002702 at pc 0x55f33fedf91b bp 0x7fffaa6cf0e0 sp 0x7fffaa6cf0d8
+READ of size 1 at 0x621000002702 thread T0
+    #0 0x55f33fedf91a in xmlDictComputeFastQKey /home/spark/libxml2-2.9.2/dict.c:489:18
+    #1 0x55f33fedd51f in xmlDictQLookup /home/spark/libxml2-2.9.2/dict.c:1093:12
+    #2 0x55f33feecadc in xmlSAX2StartElementNs /home/spark/libxml2-2.9.2/SAX2.c:2238:17
+    #3 0x55f33fcaa600 in xmlParseStartTag2 /home/spark/libxml2-2.9.2/parser.c:9707:6
+    #4 0x55f33fca1624 in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10069:16
+    #5 0x55f33fcb1c6a in xmlParseDocument /home/spark/libxml2-2.9.2/parser.c:10841:2
+    #6 0x55f33fccdccf in xmlDoRead /home/spark/libxml2-2.9.2/parser.c:15298:5
+    #7 0x55f33fc5210c in LLVMFuzzerTestOneInput /home/spark/fuzzer-test-suite/libxml2-v2.9.2/target.cc:14:18
+    #8 0x55f33fc5205d in ExecuteFilesOnyByOne /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c:260:7
+    #9 0x55f33fc51e4d in LLVMFuzzerRunDriver /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c
+    #10 0x55f33fc519dd in main /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c:316:10
+    #11 0x7efd56009d8f in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #12 0x7efd56009e3f in __libc_start_main csu/../csu/libc-start.c:392:3
+    #13 0x55f33fb916a4 in _start (/home/spark/fuzzer-test-suite/libxml2-v2.9.2/xml_fuzz+0xb96a4) (BuildId: 71ba520ee994801d1e928f0b66d5e79a2b98035f)
+
+0x621000002702 is located 514 bytes to the right of 4096-byte region [0x621000001500,0x621000002500)
+allocated by thread T0 here:
+    #0 0x55f33fc144ee in malloc (/home/spark/fuzzer-test-suite/libxml2-v2.9.2/xml_fuzz+0x13c4ee) (BuildId: 71ba520ee994801d1e928f0b66d5e79a2b98035f)
+    #1 0x55f33fed7a73 in xmlDictCreate /home/spark/libxml2-2.9.2/dict.c:554:22
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/spark/libxml2-2.9.2/dict.c:489:18 in xmlDictComputeFastQKey
+Shadow bytes around the buggy address:
+  0x0c427fff8490: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff84a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c427fff84e0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff8500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff8510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff8520: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8530: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==174370==ABORTING

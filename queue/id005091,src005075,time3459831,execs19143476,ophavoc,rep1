@@ -1,0 +1,13 @@
+<?xml verTY recu?xml verTY recurse "&long;�l�ng;n="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "Aentry>&rAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIdddddddddddddddddddddddd>>>>>>>>>>>?int&#8nt&#88888;A&ہiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIdddddddddddddddddddddddd>>>>>>>>>>>?int&#8nt&#88888;A&ہiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd>>>>>>>>>>>?int&#8nt&#88888;A&ہiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIdddddddddddddddeہioXہiہdddddddddddddddddddddddddddddddddddddddddddddddddddAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIddddddddddddddddddddddddddddddddddddddddddddddddeہioXہiہdddddddddddddddddddddddddddddddddddddddddddddddddddAAAAAAAAAAAAA">
+  <!ENTITY recurse "&lo;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  ہiہ%
+  1<layerdddddddddddfdddddddddIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIdddddddddddddddddddddddddddddddddddddddddddddd:le::::vtemcodin%%dddddddddddddddddddddddddddddddd
+  <entry attr1="12entry>&recurse;</entry>
+  <entry attr1="123" 

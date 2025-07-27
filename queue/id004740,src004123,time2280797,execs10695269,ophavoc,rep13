@@ -1,0 +1,78 @@
+  <su >
+)  ?x!ENTIü"><![CDATA[?
+
+x><![CDATA[?=l‹ng	ATcodi	k!ENTIl="			<![CDATA[?			 lENT?x!ENTIl="2"><![CDATA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&long;">    <![CDATA[
+      <nested>inside CDATA</nested#
+ ATA[?=l‹ng	2">		k!ENTIl="			<![CDATA[?		=l‹ng	2">		ENTIl="2"><![CDATA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&long;">
+    <![CDATAc
+      <>
+)  ?x!ENTIng;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+<![CDATA[
+ ü"><![CDATA[?
+
+x><![CDATA[?=l‹ng	ATcodi	k!ENTIl="			<![CDATA[?		d#
+ ATA[?=l‹ng	2">		k!ENTIl="			<![CDATA[?		=l‹ng	2">		k!EN lEttr2="&long;">    <![CDATA[
+      <nested>inside CDATA</nested#
+ ATA[?=l‹ng	2">		k!ENTIl="			<![CDATA[?		=l‹ng	2">		 lENT?x!ENTIl="2"><![CDATA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&longELEMENT e (#PCDATA)>
+  <!ENTITAAAng;b>
+]><entry>AAAAA;&long;b>
+]><entry>&recurse;</en
+<fuzzdata>
+y=û    <sub>
+      <deep>
+        AAAAAAAAAA<? <layer lLvAx <layer lLvAAAAAAAAATcodi	k!ENTIl="			<![CDATA[?	<![CDA><layer le:el="1"><![CDATA[x]]>
+   on="1(enaa   <layer ne:el="1"><![CDATA[x]]><ub>
+   on="1(enaa   <layer le:el="1"><![CDATA[x]]>sub>
+   on="1(enaa   <layer le:el="1"><![CDATA[x]]></l <layer le::le::@:vodin%%aa<l::vtemcodi1(en <layer le:el="1"><![CDATA[x]]>sub>
+   on="1(enaa   <layer ne:el="1"><![CDATA[x]]><ub>
+   on="1(enaa   <layer le:el="1"><![CDATA[x]]>
+   on="1(enaa   <layer le:el="1"><layer le:el="1"><![CDATA[x]]>sub>
+   on="1(enaa   <layer ne:el="1"><![CDATA[x]]><ub>
+   on="1(enaa   <layer le:el="1"><![CDATA[x]]>sub>
+   on="1(enaa   <layer le:el="1"><![CDATA[x]]></l <layer le::le::@:vodin%%aa<l::vtemcodi%&loè/l <layer le::le::::vtemcodin%%aa<l::vtemcodin%%%%&<![&loè/l <layer le::le::::vtemcodin<l::vtemcodin%%%%&<![CDATA[x]]></l <layer le::le::@ma<l::vtemcodin%%%%&loè/l <layer le::le::::vTA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&long;">
+    <
+  <entry attr1="N23" attrÍ="&long;"> <![CDATA[
+  ted>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+<sub>
+  <deep>
+ ;">
+    <![CDATAc
+      <nested>inside CDATTIl="on="1.0Û emcodi	k!ENTIl="			<![CDATA[?	ENT?x!ENTIü			<![CD"><![CDATA[?
+
+x><![CDATA[?=l‹n'	ATcodi	k!ENTIl="			<![CDATA[?			 lENT?x!ENTIl="2"><![CDATA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDATA</nested#
+ ATA[?=l‹ng	2">		k!ENTIl="			<![CDATA[?		=l‹ng	2">		 lENT?x!ENTIl="2"><![CDATA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&long;">
+    <![CDATA[
+      <nestnested>inside CDATTIl="on="1/0Û emcodi	k!ENTIl="			<![CDATA[?			 lENT?x!ENTIü"><![CDATA[?
+
+x><![CDATA[?=l‹n'	AAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>![CDATA[
+      <nested>inside CDATA</nested#
+ ATA[?=l‹ng	2">		k!ENTIl="			<![CDATA[?		=l‹ng	2">		klENT?x!ENTIl="2"><![CDATA[?
+
+x="2"><![CDATA[?=l‹ng	r1="123" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDATTIl="			<![CDATA[?			 lE

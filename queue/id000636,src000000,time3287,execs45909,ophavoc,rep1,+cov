@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAA"2"><![CDATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAecurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdaturse;</entry>
+  3" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entrylayer>
+        <layer level="3">

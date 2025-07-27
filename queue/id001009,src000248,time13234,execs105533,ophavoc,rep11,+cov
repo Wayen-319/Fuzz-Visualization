@@ -1,0 +1,11 @@
+<?entry*)>
+ 	<!ELExml versjon="1.0" enqoding="UTG8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT zfuzzdata (entry*)>
+ 	<!ELEMENT entng="UTF8"?>
+<!DOCry (#PCDATA)>
+  <!E      <layer level="3"><![CDAA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata

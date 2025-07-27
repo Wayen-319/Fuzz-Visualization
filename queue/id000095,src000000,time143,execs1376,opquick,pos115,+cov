@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDA5A)>
+  <!TY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attr</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+  l="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]

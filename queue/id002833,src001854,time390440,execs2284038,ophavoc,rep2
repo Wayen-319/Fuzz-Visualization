@@ -1,0 +1,16 @@
+<?xml versiAAAAAAAAAencoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  %%ong
+%%%Il%zzdata (ent&long
+ LEMENT entrx (#PCDATA)>
+  <!ENTI>
+ ! ;entry>
+  <entry>
+    <sub>
+  <deep> <layer level="1"><![CDATA[x]]></layer>
+    <layer level="2"><![CDATAZy]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+  </deep>
+    </sub>
+  </entry>
+</fuz

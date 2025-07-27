@@ -1,0 +1,30 @@
+<?xm“ verecurse "&long;&long;&long;&long;&long;&losion="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzda><deest:epp><deest:eW>ta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAA">
+  <!EKTITY recurse "&long;&long;&long;&long;&long;&long;Ωlong;">
+]>
+<fuzzdaTa>
+  <entry>&recurse;</wntry>
+  <entry attr>="123" attr2="&long;">
+    <![CDATA[
+     >inside CDATA</nes|ed>
+    ]]>
+  </entry>
+   τττg="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (eττττττττττττττ<!ENTITY recurse "&qong;&long;&long;&long;&long;&fong;&hong;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>τττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττυτττττττττττττττττττττττττττττττττττττττττττττττττττOOOOOOOOττττττττττττττττττττττττττττ </sub<
+long;&l‹ng;</fuvep="2"><![CDATA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+  </deep>
+    </sudta [
+  <!ELE]ENT fuzzdata (entry*),
+  <!ELEMENT a (entry*)>
+  <a>L  <τττττττττ<!---->
+<!----><!entrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&loy>&recurse;</entry>
+  <entry attr1="123" a

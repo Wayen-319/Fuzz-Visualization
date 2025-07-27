@@ -1,0 +1,32 @@
+<?xml verTY recurse "&long;&long;&long;&long;&long;&losion="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      <nested>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+<sub>
+   r level="3"><![CDATA[z]]></layer>
+      </deep>
+   ττττττττττττττττττττττττττττττττττΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦΦτττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττ </sub<g;&l<![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub<
+long;&long;</fuzzdta [
+  <!ELEMENT f!ELEMENT a (entry*)>
+  <!ELEMENT
+        <laAAAAAAAlaAAAAAAAAAAAAAAAAAAYP  AAayyyyuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        <laAAA

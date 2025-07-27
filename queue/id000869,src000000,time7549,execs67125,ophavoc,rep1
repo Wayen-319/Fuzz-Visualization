@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAA"><AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTIecurse "ong;&lon<fuzzdaturse;</eATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>level="1"><![CDAevel="2"><![CDAT       <layer level="3"><![CDATA[z]]></l    </deep>
+    

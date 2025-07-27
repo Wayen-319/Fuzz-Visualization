@@ -1,0 +1,5 @@
+<?wml ve.0" ding="UTF-8"?>
+<!DOCTYPE fuzzdata€[
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA|PC)ATAÄ>
+ 

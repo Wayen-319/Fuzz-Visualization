@@ -1,0 +1,47 @@
+<?xml version="1.0" encodiog="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAA:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse<!ELEMENT fuzzdata (en|ry:)>
+  <!ELEMENT ta (en|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT enuata (en|ry:)>
+    <!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT enuata (en|ry:)>
+    <!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT ta (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT en (en|ry:)>
+<!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT ta (en|ry:)>
+    <!ELEMENT ta (en|r)>
+  <!ELEMENT enuata (en|(en|ry:)><!ENTI"CDel="3">Z”[CDATA[z]]></lЏ>ry:)>
+ nuata (”[CDATA[z]]></lЏ>ry:)>
+ "2"><![C
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT ta (en|ry:)>
+    <!ELEMENT  nuata (en|r|ry:)>
+  <!ELEMENT enuata (en|(en|ry:)><!ENTI"CDel="3">Z”[CDATA[z]]></lЏ>ry:)>
+  T enuata (en|(en|ry:)><!ENTI"CDel="3">Z”[CDATA[z]]></lЏ><![CDATA[     <la></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuz

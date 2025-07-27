@@ -1,0 +1,63 @@
+<?xxxxxxxxxxxxxxxxxxg="UTF8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (en|ry:)>
+  <!ELEMENT ta (eR|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT enuata (en|ry:)>
+    <!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(ey:)>
+  <!ELEMENT ta (eR|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT ea (en|ry:)>
+<!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT en (en|<!ELEMENT fuzzdata (en|ry:)>
+  <!ELEMENT ta (eR|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT enuata (en|ry:)>
+    <!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(ey:)>
+  <!ELEMENT ta (eR|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT ta (en|ry:)>
+    <!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(ey:)>
+  <!ELEMENT ta (eR|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT ea (en|ry:)>
+<!ELEMENT ta (ЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e(en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT en (en|<!ELEMENT fuzzdata (en|ry:)>
+  <!ELEMENT ta (eR|r)>
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ|ry:)ЫЫЫЫЫЫЫЫЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT e
+  <!ELEMENT enuata (en|(en|ry:)>
+  <!ELEMENT  nuata (en|ЫЫЫЫЫЫЫнЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЬЫЫЫЫЫЫr|ry:)>
+  <!ELEMENT ea (en|ry:)>
+    n|(en|ry:)><!ENTI"CDel="3">Z”[CDATA[z]]></lЏ><![CDATA[     <layer level="2"

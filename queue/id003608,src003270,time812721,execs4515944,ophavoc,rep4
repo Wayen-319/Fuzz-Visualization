@@ -1,0 +1,26 @@
+<?xml versio  "1.0" eNcoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAA;&]&#x88long;&lo/]&#;AAA<;&]&#x88AAAAlong;&lon?>
+<!DOCTYata [
+  <!ELEMENT uzzÿÿ(fug;&lenU/]&#;&lenU/]&#x88AAAAAAAAAAA--AAA">
+  <!ENTITY recurfe "%long;&ng;&]&#x88AAA&#x88AAAAlong;&long;&lenU/]&#;&lenU/]'#x88AAAAAAAAAAA--AAA">
+  <!ENTITY recurfe "%long;&long;&lAlon&lenU/]&#x88AAAAAAAAAAA--AAA">
+  <!ENTITY recurfe "%long;&long;&long;&]&#x88AAAAlong;&long;&long;&long;">
+]>
+<fuzzdata>
+  <en†ry>&recurse;</entry>
+  <entrted>
+    r2="&long;">
+    <![CDATA[
+      <nested>insi>/nested>
+   ]]>
+  </entry>
+  <entry>
+   b>
+      <deep>
+        <ayer>[        <layer level="2"><![CDATA[y]]B</layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </

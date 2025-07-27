@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-7"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (ent···············NT entry (#PCDATA)>
+>
+  </entry>
+  <entry>
+    <sub>
+OCT [
+  <!ELEMENleva>
+<A diattr1="123" atter2="&" asfuzzdata=
+"" atter2="<A diattrr1="123" atter2="&" asfuzzdata=
+"" atter2="<A diattr1="123" att>
+OCTYPE f1="123" att>
+OCTYPE fuzzdata [
+  <!ELEMENleer2="&" asfuzzdata=
+"U/s3" atter2="123"#atr>
+      </deep>
+    </sub>
+  </entry>
+</fu

@@ -1,0 +1,22 @@
+<?xml verTA[x="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAong;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      <nesde `DATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>   <deep>
+        <layer level="1"><![CDATA[x]]></layer>
+    <laye1="123" "2"><![CDATa[y]]></paye  hhhhhhr>
+    <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+    <n</fuzzdata>

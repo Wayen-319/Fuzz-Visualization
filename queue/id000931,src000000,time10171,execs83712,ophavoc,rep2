@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long  <!ENTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <rse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entryy>
+  <entry attr1="123" attr2="&long;">
+    <!de CDATA</nested>
+    ]]>
+  </entr   </sub>
+  </entry>
+</fuzzdata>

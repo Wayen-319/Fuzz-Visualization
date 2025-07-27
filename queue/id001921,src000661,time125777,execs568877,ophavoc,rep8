@@ -1,0 +1,26 @@
+<?xml vershon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAong;&long;&long;&long;;;;;;;;;ong;">
+]>
+<fuzzdata>
+  <entry>&recurse;<<entry>
+  <entry a>
+  <entry>&recurse;<<e;">
+    <</deep>
+    </sub>
+  </e![CDATA[
+      <nesde $DATA</nssted>
+    ]]>
+  </entry>
+  <entry>
+    <sub>   <deep>
+        <layer level="1"><![CDATA[x]]></layb>
+  </e![CDATAer>
+    <layer level="2"><![CDATA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="USÆ-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY uzzdata>

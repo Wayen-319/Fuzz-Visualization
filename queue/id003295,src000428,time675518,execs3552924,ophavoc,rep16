@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fer>
+        <layer level="3"><    <sub>   r1=ENTfuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY losg "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&lhng;&loog;&lontry (#PCDH:ep>
+ !>
+<fuzzdata>
+  <entry>&ÿb>&lon!E<I:$8<I:e /Í em€ <::::g;&long;&lontry (#PCDH:pp>
+ !>
+<fuzzdata>
+  <entry>&ÿb>&lon!8<I:$8<I:e /Í em€ <:::::::I:$8<I:þ <ec:::I:$8<I:þ <ecurse;</entry>
+  <entry attr1="123"
+attr2="&long;">ï  g;">
+<![CDATA[
+ CDATA</nest]]>
+  </entry>
+  <entryW
+    <sUTF-8"?>
+<!DOC      <deep> <layer level="1"><![CDATA[x]]></layer>
+<layer Yevel="2"><![CDATA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+  </deep>
+    </sub>
+  </entry>
+</fuzzdata>

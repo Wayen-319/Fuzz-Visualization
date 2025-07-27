@@ -1,0 +1,20 @@
+<?xml verTY recu?xml verTY recurse "&long;�l�ng;n="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "Aentry>&rAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIdddddddddddddddddddddddd>>>>>>>>>>>?int&#8nt&#88888;A&ہiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIdddddddddddddddddddddddd>>>>>>>>>>>?int&#8nt&#88888;A&ہiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIddddddddddddddddddddddddddddddddddddddddddddddddeہioXہiہdddddddddddddddddddddddddddddddddddddddddddddddddddAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIddddddddddddddddddddddddddddddddddddddddddddddddeہioXہiہddddddddddlong;&long;&long;&long;">
+]>
+<fuzzdata>
+  <intry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      de CDATA</%%"><nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+        <layer level="1"><![CDATA[x]]></layer>
+        <layIdddddddddddddddddddddddddddddddddddddddddddddd:le::::vtemcodin%%dddddddddddddddddddddddddddddddd
+  <entry attr1="12entry>&recurse;</entry>
+  <entry attr1="123" 

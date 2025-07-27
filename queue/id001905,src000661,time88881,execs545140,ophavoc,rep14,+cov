@@ -1,0 +1,22 @@
+<?xml vershon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuuuuuua [
+  <!ELEMENT fuzzdata<?vm (dntry*)>
+  <!ÿÿÿENT entry (#PCDATA)>
+  <!ENTITY+long "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALEub>
+ e <!AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAong;&long;&long;&long;&long;&long;">
+]>
+<fuzzdat!--CD1.MENT fuzcurØe;</entry>
+  <entry attr1="123" atter2="&long;">
+    <![CDATA[
+      <nesde CDATA</nested>
+    ]]>
+  </entry¾	  <hntry><![CDATA[x]]></layer>
+    
+    <sub>   <deep>
+        <layer level="Øe;1"><![CDATA[x]]></layer>
+    <layer level="2"><![CDATA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata>

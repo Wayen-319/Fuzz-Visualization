@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (%%%%%%%%%%%&lonPEzng "AAAAAAAA;&long;">
+]>  <!ENTITY recurse "&long&lg;">
+]>
+<fuzzdata>
+  <entry>&rec3" attr2="&long;">
+    <![CDATA[
+  ted>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+    <s        <layer level="2"><![CDATA[y]]></layer>
+        <lžyer le

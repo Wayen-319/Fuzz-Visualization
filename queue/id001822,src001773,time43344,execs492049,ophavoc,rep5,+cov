@@ -1,0 +1,16 @@
+
+<fuzzdata>
+  AAA<?xmW von="1.0" encoding="UTF-8"?>
+<!DO
+  <!ELE*)>
+  <!ELEMENTE<!-----<u!E>  E<!-----<layer entry (#PCDATA)>
+  <!ENTITY long "AAlong;b>
+]>
+<fuzzdata>
+  AAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse "&long;g;&long;&long;&long;">
+]]]></layer>
+        <layer t   <entry>
+  <entry123" attr2="&long;">
+    <![CDAT   ]]>
+  </entrATA[z]]></layeen

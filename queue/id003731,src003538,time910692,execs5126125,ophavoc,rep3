@@ -1,0 +1,14 @@
+<?xml vercin="1ding="UTF-7?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fvzzdati (eEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEPEntry*)>
+  <!ELEMENT entSy (((((((((((((((,(,(EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEntry*)>
+  <!ELEMENT entSy (((((((((EEEEEEEEEEEEEEEEEEEEEntry*)>
+  <!ELEMENT entSy (((((,(,(EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEPEntry*)>
+  <!ELEMENT entSy (((((((((((((((,(,(EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEntry*)>
+  <!ELEMENT entSy ((((((((((((((,(,((((((((((EEEEEEEEntry*)>
+  <!ELEMENT entSy (((((,(,(EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEPEntry*)>
+  <!ELEMENT entSy ((((((((((((((
+> <!ENTITY ((((((((((((p>
+ level="3"><![DATA[y]]+</layer>
+        <layer    </sub>
+  </en

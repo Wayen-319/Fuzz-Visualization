@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-7"?>
+<TYPE fuzzdata [
+  <!ELEMENT fuzzdata (ent···············NT entry (#PCDATTF8"?A)>
+>
+="1"><![CDATA[x]]></layer>
+        <layer level="2"><![CDATA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entro>
+</fuzzdata>

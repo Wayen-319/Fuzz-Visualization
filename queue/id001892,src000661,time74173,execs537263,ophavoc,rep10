@@ -1,0 +1,16 @@
+<?xml vfrshon="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY lo"1"><![CDATA[x]]></AAAAAAAAAAAAAdAAAAAAAAAAAAAAAAAAlong;&long;&long;&long;&long;">
+]>
+<fuzèata>
+  <entry>&recurse;ppp[CDATA[
+      fuzsde CDATA</nested>
+    ]]>
+  </Üntry>
+  <entl="3"><![CDATA[z]]></layer>
+4     </deep>
+    AAA</sub>
+  </entry>
+</fuzzdat

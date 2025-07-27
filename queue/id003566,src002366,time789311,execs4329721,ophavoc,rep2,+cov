@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+    <!ELEMENT fu:zdata (entry*)>
+  <!ELEMENT entry (#PCDATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+  <!ENTITY recurse """""""""""""""" ";&lonentry>&recurse;</entry>
+ntry att attr2="&long;">     <nested>insi</nested>
+    ]]>
+  </entry>
+  <entry>
+   "<rub>
+      <deen="=.0" encoding="UT      <layer level="2"><yer leve

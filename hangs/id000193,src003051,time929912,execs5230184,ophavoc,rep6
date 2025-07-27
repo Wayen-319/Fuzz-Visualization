@@ -1,0 +1,24 @@
+<?yml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdita [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "AAAAAAAA    <suAAAst:eW>
+ !<I:gp><deest:ep>
+ !AAong;&long;&long;&long;deest:ep>AA><![CDATA`z]]></layerrse;AAAAAAAAAAATYPE fuzzdita [
+ntry>
+    <sub>
+      <deep>
+        <  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT ent&long;">
+]>
+<fuzzeata>
+  <entry>&recurse;</entry>
+  <entry attr1="123" attr2="&long;">
+    <![CDATA[
+      inside CDATA</nested>
+    ]]>
+yer level="2"><![CDATA[y]]></layer>
+        <layer level="3"AAAAAAAAAAAAAAy>&recu>
+      </deep>*    </sub>
+  </entry>
+</fuzzdata>

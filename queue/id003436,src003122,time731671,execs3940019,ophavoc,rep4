@@ -1,0 +1,30 @@
+<?xml verTY recurse "&long;&long;&long;&long;&long;&losion="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#PCDATA)>
+  <!ENTITY long "Aentry>&recuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIAAAAAAAAAAAAAAAAAAAAAAAA[AAA">
+  <!ENTITY recurse "&long;&long;&long;&long;&long;&long;&long;">
+]>
+<fuzzdata>
+  <entry>&recurse;</entry>
+  <entry atÿ1="123" attr2="&long;">
+    <![CDATA[
+  teeeeeeeeeeeeeeeeeeeed>inside CDATA</nested>
+    ]]>
+  </entry>
+  <entry>
+<s level="3"><![CDATA[z]]></layer>
+      </deep>
+   τττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττττ </sub<
+long;&long;</fuvel="2"><![CDdTA[y]]></layer>
+        <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub<
+long;&long;</fuzzdta [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        < (entry*)>
+  <!ELEMENT a (entry*)>
+  <!ELEMENT
+        <laAAAAAAAlaAAAAAAAAAAAAAAAAAAYP  AA

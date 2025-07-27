@@ -1,0 +1,26 @@
+<?xml vershon="entry>
+    <sub>
+      <TY ldeep>1.0"zg="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENy*)>
+  <!ELE entry (#PCDATA) ![C      <layer level="1"><![CDA>
+  <!ENTITY long "AAAAAAAAAAAA·AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAong;&lon€;&long;&long;&lo]g;&lOng;">
+]>
+<fu">
+]>
+<fuzzda  <enyer ta>
+  <Vlase;</entry>
+  <entry attr1="123" attr2="&long">
+    <![CDATA[
+      <nesÈe CDATA</nested>
+    ]]>¥¥¥¥¥¥¥¥¥¥¥¥¥
+  </entryub>
+      <deep>1.0" encodin>
+  <entry>    <sub>   <Oeep>
+        <layer level="1"><!\CDA <entry123" attr2="TA[x]]zzzzzzzzzzzzzzzzzzA)>
+  <aper lA[y]]></layer>
+    <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata

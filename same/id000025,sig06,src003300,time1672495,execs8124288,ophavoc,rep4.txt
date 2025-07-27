@@ -1,0 +1,24 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==174372==ERROR: AddressSanitizer: SEGV on unknown address 0x618fffffffed (pc 0x56057a29f224 bp 0x56057a503f40 sp 0x7fff6fea0d30 T0)
+==174372==The signal is caused by a READ memory access.
+    #0 0x56057a29f224 in xmlDictComputeFastQKey /home/spark/libxml2-2.9.2/dict.c:489:18
+    #1 0x56057a29d51f in xmlDictQLookup /home/spark/libxml2-2.9.2/dict.c:1093:12
+    #2 0x56057a2acadc in xmlSAX2StartElementNs /home/spark/libxml2-2.9.2/SAX2.c:2238:17
+    #3 0x56057a06a600 in xmlParseStartTag2 /home/spark/libxml2-2.9.2/parser.c:9707:6
+    #4 0x56057a061624 in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10069:16
+    #5 0x56057a060096 in xmlParseContent /home/spark/libxml2-2.9.2/parser.c:9982:6
+    #6 0x56057a0620ec in xmlParseElement /home/spark/libxml2-2.9.2/parser.c:10155:5
+    #7 0x56057a071c6a in xmlParseDocument /home/spark/libxml2-2.9.2/parser.c:10841:2
+    #8 0x56057a08dccf in xmlDoRead /home/spark/libxml2-2.9.2/parser.c:15298:5
+    #9 0x56057a01210c in LLVMFuzzerTestOneInput /home/spark/fuzzer-test-suite/libxml2-v2.9.2/target.cc:14:18
+    #10 0x56057a01205d in ExecuteFilesOnyByOne /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c:260:7
+    #11 0x56057a011e4d in LLVMFuzzerRunDriver /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c
+    #12 0x56057a0119dd in main /home/spark/AFLplusplus/utils/aflpp_driver/aflpp_driver.c:316:10
+    #13 0x7fe73715dd8f in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #14 0x7fe73715de3f in __libc_start_main csu/../csu/libc-start.c:392:3
+    #15 0x560579f516a4 in _start (/home/spark/fuzzer-test-suite/libxml2-v2.9.2/xml_fuzz+0xb96a4) (BuildId: 71ba520ee994801d1e928f0b66d5e79a2b98035f)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/spark/libxml2-2.9.2/dict.c:489:18 in xmlDictComputeFastQKey
+==174372==ABORTING

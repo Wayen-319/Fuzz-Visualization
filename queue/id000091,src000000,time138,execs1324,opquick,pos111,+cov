@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fuzzdata [
+  <!ELEMENT fuzzdata (entry*)>
+  <!ELEMENT entry (#éCDATA)>
+  <!ENTIng;&long;&long;&long;&long;&longzzdata>
+  <entry>&recurse;</entry>
+  <entry attr</nested>
+    ]]>
+  </entry>
+  <entry>
+    <sub>
+      <deep>
+      <layer level="3"><![CDATA[z]]></layer>
+      </deep>
+    </sub>
+  </entry>
+</fuzzdata>
